@@ -3,7 +3,7 @@ function App() {
     <div data-testid="app" className="app">
       Welcome to Benchttp
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
