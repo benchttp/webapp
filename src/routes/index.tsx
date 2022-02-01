@@ -1,11 +1,18 @@
+import { createElement } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import App from '../App'
+import { GlobalStyle } from '../shared/style'
+import { ROUTES } from './routes.constants'
 
 const Router = () => {
   return (
-    <Routes>
-      <Route path="/" element={<App />} />
-    </Routes>
+    <>
+      <GlobalStyle />
+      <Routes>
+        {ROUTES.map(({ path, page }) => (
+          <Route path={path} element={createElement(page)} />
+        ))}
+      </Routes>
+    </>
   )
 }
 
