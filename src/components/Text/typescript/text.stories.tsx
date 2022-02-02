@@ -9,7 +9,6 @@ import {
   FontWeights,
 } from '../../../shared/style/constants'
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Atoms/Text',
   component: Text,
@@ -22,10 +21,7 @@ export default {
   },
 } as ComponentMeta<typeof Text>
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Text> = (args) => <Text {...args} />
-
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 
 export const Main = Template.bind({})
 
