@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components'
-import { COLORS, FONT_SIZE, FONT_FAMILY, SPACINGS } from './constants'
+import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACINGS } from './constants'
 
 export const GlobalStyle = createGlobalStyle`
 :root {
-    font-size: ${FONT_SIZE.base};
-    font-family: ${FONT_FAMILY.inter};
+    font-size: ${FONT_SIZES.base};
+    font-family: ${FONT_FAMILIES.inter};
     color: ${COLORS.white};
 }
 
