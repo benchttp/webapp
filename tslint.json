@@ -1,14 +1,16 @@
 {
-    "defaultSeverity": "error",
-    "extends": [
-        "tslint:latest",
-        "tslint-react",
-        "tslint-eslint-rules",
-        "tslint-config-prettier"
-    ],
-    "jsRules": {},
-    "rules": {
-        "no-submodule-imports": false
-    },
-    "rulesDirectory": []
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ],
+  "jsRules": {},
+  "rules": {
+    "no-submodule-imports": false,
+    "no-empty-interface": false,
+    "no-string-literal": false
+  },
+  "rulesDirectory": []
 }
