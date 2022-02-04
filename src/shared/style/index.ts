@@ -1,5 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACINGS, BORDER_RADIUS } from './constants'
+import {
+  COLORS,
+  FONT_SIZES,
+  FONT_FAMILIES,
+  SPACINGS,
+  BORDER_RADIUS,
+} from './constants'
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -13,7 +19,7 @@ body {
 }
 
 ${SPACINGS.map(
-    (spacing, index) => `
+  (spacing, index) => `
 .m-${index} {
     margin: ${spacing}
 }
@@ -57,7 +63,7 @@ ${SPACINGS.map(
 )}
 
 ${BORDER_RADIUS.map(
-    (borderRadius, index) => `
+  (borderRadius, index) => `
   .br-${index} {
       border-radius: ${borderRadius}
   }

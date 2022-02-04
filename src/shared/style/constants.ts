@@ -10,10 +10,7 @@ export const SPACINGS = [
   '56px',
 ]
 
-export const BORDER_RADIUS = [
-  '0',
-  '8px',
-]
+export const BORDER_RADIUS = ['0', '8px']
 
 export enum Colors {
   PRIMARY = 'primary',
