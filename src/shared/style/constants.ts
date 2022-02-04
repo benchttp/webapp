@@ -1,4 +1,5 @@
 export const SPACINGS = [
+  '0',
   '8px',
   '12px',
   '16px',
