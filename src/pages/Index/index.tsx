@@ -1,12 +1,7 @@
 import { FC } from 'react'
-import MainLayout from '../../layouts/MainLayout'
 
 const Index: FC = () => {
-  return (
-    <MainLayout>
-      <p>Index</p>
-    </MainLayout>
-  )
+  return <p>Index</p>
 }
 
 export default Index
