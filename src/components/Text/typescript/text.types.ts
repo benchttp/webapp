@@ -1,3 +1,4 @@
+import { IStandardProps } from '../../../shared/helpers/types'
 import {
   Colors,
   FontFamilies,
@@ -7,7 +8,7 @@ import {
 
 export type IProps = IPoppinsProps | IInterProps
 
-interface IGenericProps {
+interface IGenericProps extends IStandardProps {
   color?: Colors
 }
 
