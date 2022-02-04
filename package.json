@@ -27,7 +27,7 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "prettier --check ./src && tslint -c tslint.json 'src/**/*.ts'",
+    "lint": "prettier --write ./src && tslint -c tslint.json 'src/**/*.ts'",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },
