@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACINGS } from './constants'
+import { COLORS, FONT_SIZES, FONT_FAMILIES, SPACINGS, BORDER_RADIUS } from './constants'
 
 export const GlobalStyle = createGlobalStyle`
 :root {
@@ -54,6 +54,14 @@ ${SPACINGS.map(
     padding-right: ${spacing}
 }
 `
+)}
+
+${BORDER_RADIUS.map(
+    (borderRadius, index) => `
+  .br-${index} {
+      border-radius: ${borderRadius}
+  }
+  `
 )}
 
 .f {
