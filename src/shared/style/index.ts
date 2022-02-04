@@ -13,7 +13,7 @@ body {
 }
 
 ${SPACINGS.map(
-  (spacing, index) => `
+    (spacing, index) => `
 .m-${index} {
     margin: ${spacing}
 }
