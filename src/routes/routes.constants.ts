@@ -1,8 +1,9 @@
 import Index from '../pages/Index'
-import { IRoutes } from './routes.types'
+import { IRoute } from './routes.types'
 
-export const ROUTES: IRoutes[] = [
+export const ROUTES: IRoute[] = [
   {
+    key: 'index',
     path: '/',
     page: Index,
   },

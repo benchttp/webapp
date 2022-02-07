@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
-export interface IRoutes {
+export interface IRoute {
+  key: React.Key
   path: string
   page: FC
 }

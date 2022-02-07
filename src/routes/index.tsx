@@ -11,8 +11,8 @@ const Router = () => {
       <GlobalStyle />
       <MainLayout>
         <Routes>
-          {ROUTES.map(({ path, page }) => (
-            <Route path={path} element={createElement(page)} />
+          {ROUTES.map(({ key, path, page }) => (
+            <Route key={key} path={path} element={createElement(page)} />
           ))}
         </Routes>
       </MainLayout>
