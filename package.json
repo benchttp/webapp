@@ -27,22 +27,10 @@
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "prettier --write ./src",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app",
-    "overrides": [
-      {
-        "files": [
-          "./src/components/**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
-    ]
   },
   "browserslist": {
     "production": [
@@ -66,8 +54,16 @@
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.17",
     "@types/styled-components": "^5.1.21",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "babel-plugin-styled-components": "^2.0.2",
     "customize-cra": "^1.0.0",
+    "eslint": "7.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "prettier": "^2.5.1",
     "react-app-rewired": "^2.1.11",
     "webpack": "^5.68.0"
