@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { StyledText } from './typescript/text.style'
 import { IProps } from './typescript/text.types'
 

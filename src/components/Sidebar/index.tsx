@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { StyledSidebar } from './typescript/sidebar.styles'
 import { IProps } from './typescript/sidebar.types'
 

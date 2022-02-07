@@ -1,5 +1,6 @@
 import { createElement } from 'react'
 import { Routes, Route } from 'react-router-dom'
+
 import MainLayout from '../layouts/MainLayout'
 import { GlobalStyle } from '../shared/style'
 import { ROUTES } from './routes.constants'
