@@ -1,0 +1,75 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:import/errors
+  - plugin:import/warnings
+  - plugin:import/typescript
+  - plugin:prettier/recommended
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - react
+  - react-hooks
+  - '@typescript-eslint'
+  - prettier
+settings:
+  react:
+    version: detect
+ignorePatterns: [/public]
+
+rules:
+  # Base rules
+  quotes: [error, single, { avoidEscape: true }]
+
+  # Import rules
+  import/newline-after-import: error
+  import/order:
+    - error
+    - groups:
+      - builtin
+      - external
+      - internal
+      - [parent, sibling]
+      - index
+      newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
+  
+
+  # React rules
+  react/react-in-jsx-scope: off
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error
+
+  # Naming conventions
+  '@typescript-eslint/naming-convention':
+    - error
+    - selector: function
+      format: [camelCase, PascalCase]
+    - selector: variable
+      format: [camelCase, PascalCase, UPPER_CASE]
+    - selector: class
+      format: [PascalCase]
+    - selector: interface
+      format: [PascalCase]
+      prefix: [I]
+    - selector: enum
+      format: [PascalCase]
+
+overrides:
+  # Script / Node files
+  - files: [./*.js]
+    env:
+      node: true
+    rules:
+      react-hooks/rules-of-hooks: off
+      '@typescript-eslint/no-var-requires': off

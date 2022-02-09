@@ -58,8 +58,8 @@ export enum FontFamilies {
 }
 
 export const FONT_FAMILIES = {
-  [FontFamilies.POPPINS]: `'Poppins', sans-serif`,
-  [FontFamilies.INTER]: `'Inter', sans-serif`,
+  [FontFamilies.POPPINS]: "'Poppins', sans-serif",
+  [FontFamilies.INTER]: "'Inter', sans-serif",
 }
 
 export enum FontWeights {
