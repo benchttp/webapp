@@ -1,10 +1,10 @@
 import { FC } from 'react'
 
-import Header from '../../components/Header'
-import Sidebar from '../../components/Sidebar'
+import { Header } from '../../components/Header'
+import { Sidebar } from '../../components/Sidebar'
 import { StyledMainLayout } from './typescript/mainLayout.styles'
 
-const MainLayout: FC = ({ children }) => {
+export const MainLayout: FC = ({ children }) => {
   return (
     <StyledMainLayout className="f f-direction-column">
       <Header />
@@ -15,5 +15,3 @@ const MainLayout: FC = ({ children }) => {
     </StyledMainLayout>
   )
 }
-
-export default MainLayout
