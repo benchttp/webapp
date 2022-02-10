@@ -74,3 +74,6 @@ overrides:
     rules:
       react-hooks/rules-of-hooks: off
       '@typescript-eslint/no-var-requires': off
+  - files: ['*.stories.tsx']
+    rules:
+      import/no-default-export: off
