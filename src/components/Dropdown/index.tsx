@@ -1,4 +1,4 @@
-import { FC, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 
 import { StyledDropdown } from './typescript/dropdown.styles'
 
@@ -7,6 +7,11 @@ interface IDropdownProps {
    * Others test to compare with
    */
   benchmarksToCompare?: Array<string>
+
+  /**
+   * Click outside handler
+   */
+  onClickOutside?: () => void
 
   /**
    * Click handler
@@ -27,7 +32,9 @@ const benchmarksToCompare = [
 ]
 
 const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
-  const [dropdownActive, setDropdownActive] = useState(false)
+  const [dropdownActive, setDropdownActive] = useState<boolean>(false)
+  const refDropdown = useRef(null)
+  const { onClickOutside } = props
 
   function openDropdown() {
     setDropdownActive(!dropdownActive)
@@ -51,6 +58,20 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
     )
   })
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (refDropdown.current && refDropdown.current !== event.target) {
+        onClickOutside && onClickOutside()
+        setDropdownActive(false)
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside, true)
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true)
+    }
+  }, [onClickOutside])
+
   return (
     <StyledDropdown>
       <div>
@@ -58,6 +79,7 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
           type="button"
           className={'storybook-dropdown'}
           onClick={() => openDropdown()}
+          ref={refDropdown}
           {...props}
         >
           + Compare with another test
