@@ -33,7 +33,7 @@ const benchmarksToCompare = [
 
 const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
   const [dropdownActive, setDropdownActive] = useState<boolean>(false)
-  const refDropdown = useRef(null)
+  const refDropdownDiv = useRef<HTMLDivElement>(null)
   const { onClickOutside } = props
 
   function openDropdown() {
@@ -41,9 +41,9 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
   }
 
   function compareTestWith(testName: string) {
-    setDropdownActive(false)
-
     console.log(`Compare ${testName}`)
+
+    setDropdownActive(false)
   }
 
   const benchmarksList = benchmarksToCompare.map((benchmarkName, index) => {
@@ -60,12 +60,14 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (refDropdown.current && refDropdown.current !== event.target) {
+      if (
+        refDropdownDiv.current &&
+        !refDropdownDiv.current.contains(event.target as Node)
+      ) {
         onClickOutside && onClickOutside()
         setDropdownActive(false)
       }
     }
-
     document.addEventListener('click', handleClickOutside, true)
     return () => {
       document.removeEventListener('click', handleClickOutside, true)
@@ -79,7 +81,6 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
           type="button"
           className={'storybook-dropdown'}
           onClick={() => openDropdown()}
-          ref={refDropdown}
           {...props}
         >
           + Compare with another test
@@ -89,6 +90,7 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
           className={`dropdown-menu ${
             dropdownActive ? 'display-dropdown' : ''
           }`}
+          ref={refDropdownDiv}
         >
           <div>{benchmarksList}</div>
         </div>
