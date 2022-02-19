@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { StyledSidebar } from './typescript/sidebar.styles'
 import { IProps } from './typescript/sidebar.types'
 
-const Sidebar: FC<IProps> = (props) => {
+export const Sidebar: FC<IProps> = (props) => {
   const { className } = props
 
   return (
@@ -12,5 +12,3 @@ const Sidebar: FC<IProps> = (props) => {
     </StyledSidebar>
   )
 }
-
-export default Sidebar

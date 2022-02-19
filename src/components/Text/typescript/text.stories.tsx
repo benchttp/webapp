@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import React from 'react'
 
-import Text from '..'
+import { Text } from '..'
 import {
   Colors,
   FontFamilies,

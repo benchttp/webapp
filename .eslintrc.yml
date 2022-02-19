@@ -31,6 +31,7 @@ rules:
 
   # Import rules
   import/newline-after-import: error
+  import/no-default-export: error
   import/order:
     - error
     - groups:
@@ -73,3 +74,6 @@ overrides:
     rules:
       react-hooks/rules-of-hooks: off
       '@typescript-eslint/no-var-requires': off
+  - files: ['*.stories.tsx']
+    rules:
+      import/no-default-export: off
