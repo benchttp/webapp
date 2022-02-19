@@ -11,7 +11,7 @@ const Router = () => {
       <MainLayout>
         <Routes>
           {ROUTES.map(({ path, page }) => (
-            <Route path={path} element={createElement(page)} />
+            <Route path={path} key={path} element={createElement(page)} />
           ))}
         </Routes>
       </MainLayout>

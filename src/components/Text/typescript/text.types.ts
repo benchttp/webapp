@@ -21,5 +21,5 @@ interface IPoppinsProps extends IGenericProps {
 interface IInterProps extends IGenericProps {
   font?: FontFamilies.INTER
   size?: FontSizes.SMALL | FontSizes.BASE
-  weight?: FontWeights.MEDIUM
+  weight?: FontWeights.MEDIUM | FontWeights.SEMI
 }
