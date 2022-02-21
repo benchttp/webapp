@@ -70,5 +70,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "homepage": "."
 }
