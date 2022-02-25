@@ -1,7 +1,6 @@
 import { FC } from 'react'
 
-import { Header } from '../../components/Header'
-import { Sidebar } from '../../components/Sidebar'
+import { Header, Sidebar } from '../../components'
 import { StyledMainLayout } from './typescript/mainLayout.styles'
 
 export const MainLayout: FC = ({ children }) => {
