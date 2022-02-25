@@ -23,7 +23,7 @@ plugins:
 settings:
   react:
     version: detect
-ignorePatterns: [/public]
+ignorePatterns: [/public, /build]
 
 rules:
   # Base rules
