@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
-import { Header, Sidebar } from '../../components'
+import { Header, Sidebar } from 'components'
+
 import { StyledMainLayout } from './typescript/mainLayout.styles'
 
 export const MainLayout: FC = ({ children }) => {
@@ -8,7 +9,7 @@ export const MainLayout: FC = ({ children }) => {
     <StyledMainLayout className="f f-direction-column">
       <Header />
       <div className="main f f-jc-space-b">
-        <Sidebar />
+        <Sidebar tests={[{ name: 'Auth0' }, { name: 'JWT' }]} />
         <div className="content p-4">{children}</div>
       </div>
     </StyledMainLayout>
