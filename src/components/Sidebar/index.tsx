@@ -7,7 +7,7 @@ import { useSidebar } from './typescript/sidebar.hook'
 import { StyledSidebar } from './typescript/sidebar.styles'
 import { IForm, IProps } from './typescript/sidebar.types'
 
-const Sidebar: FC<IProps> = (props) => {
+export const Sidebar: FC<IProps> = (props) => {
   const { className } = props
   const { control, handleSubmit } = useForm<IForm>({
     defaultValues: {
@@ -31,5 +31,3 @@ const Sidebar: FC<IProps> = (props) => {
     </StyledSidebar>
   )
 }
-
-export default Sidebar

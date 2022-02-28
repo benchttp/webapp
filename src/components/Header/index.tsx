@@ -1,8 +1,9 @@
 import { FC } from 'react'
+
 import { StyledHeader } from './typescript/sidebar.styles'
 import { IProps } from './typescript/sidebar.types'
 
-const Header: FC<IProps> = (props) => {
+export const Header: FC<IProps> = (props) => {
   const { className } = props
 
   return (
@@ -11,5 +12,3 @@ const Header: FC<IProps> = (props) => {
     </StyledHeader>
   )
 }
-
-export default Header

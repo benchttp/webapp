@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+
 import { StyledHeader } from '../../../components/Header/typescript/sidebar.styles'
 import { StyledSidebar } from '../../../components/Sidebar/typescript/sidebar.styles'
 

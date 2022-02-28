@@ -10,6 +10,8 @@ export const SPACINGS = [
   '56px',
 ]
 
+export const BORDER_RADIUS = ['0', '8px']
+
 export enum Colors {
   PRIMARY = 'primary',
   BLACK = 'black',
@@ -58,8 +60,8 @@ export enum FontFamilies {
 }
 
 export const FONT_FAMILIES = {
-  [FontFamilies.POPPINS]: `'Poppins', sans-serif`,
-  [FontFamilies.INTER]: `'Inter', sans-serif`,
+  [FontFamilies.POPPINS]: "'Poppins', sans-serif",
+  [FontFamilies.INTER]: "'Inter', sans-serif",
 }
 
 export enum FontWeights {
