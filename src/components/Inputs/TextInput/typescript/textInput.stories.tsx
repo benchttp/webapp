@@ -1,9 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { useForm } from 'react-hook-form'
-import TextInput from '..'
-import { hideControl } from '../../../../shared/helpers/storybook'
-import { Icons } from '../../../../shared/icons'
-import { Colors } from '../../../../shared/style/constants'
+
+import { TextInput } from 'components'
+import { hideControl } from 'shared/helpers/storybook'
+import { Icons } from 'shared/icons'
+import { Colors } from 'shared/style/constants'
 
 export default {
   title: 'Atoms/TextInput',

@@ -1,5 +1,7 @@
 import { FC } from 'react'
-import { COLORS } from '../../style/constants'
+
+import { COLORS } from 'shared/style/constants'
+
 import { IProps } from './typescript/iconSearch'
 
 export const IconSearch: FC<IProps> = ({ color, className }) => {

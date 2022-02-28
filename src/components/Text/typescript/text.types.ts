@@ -1,10 +1,10 @@
-import { IStandardProps } from '../../../shared/helpers/types'
+import { IStandardProps } from 'shared/helpers/types'
 import {
   Colors,
   FontFamilies,
   FontSizes,
   FontWeights,
-} from '../../../shared/style/constants'
+} from 'shared/style/constants'
 
 export type IProps = IPoppinsProps | IInterProps
 

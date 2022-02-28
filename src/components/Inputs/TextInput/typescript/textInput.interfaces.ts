@@ -1,8 +1,9 @@
 import { BaseSyntheticEvent } from 'react'
 import { UseControllerProps } from 'react-hook-form'
-import { IStandardProps } from '../../../../shared/helpers/types'
-import { Icons } from '../../../../shared/icons'
-import { Colors } from '../../../../shared/style/constants'
+
+import { IStandardProps } from 'shared/helpers/types'
+import { Icons } from 'shared/icons'
+import { Colors } from 'shared/style/constants'
 
 export type IProps =
   | (IStandard & IWithIcon)

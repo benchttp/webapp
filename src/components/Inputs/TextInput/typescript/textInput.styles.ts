@@ -1,11 +1,13 @@
 import styled from 'styled-components'
+
 import {
   COLORS,
   FONT_FAMILIES,
   FONT_SIZES,
   FONT_WEIGHTS,
   SPACINGS,
-} from '../../../../shared/style/constants'
+} from 'shared/style/constants'
+
 import { IProps } from './textInput.interfaces'
 
 export const StyledTextInput = styled['div']<IProps>`

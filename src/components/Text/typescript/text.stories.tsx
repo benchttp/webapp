@@ -1,13 +1,13 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import React from 'react'
 
-import { Text } from '..'
+import { Text } from 'components'
 import {
   Colors,
   FontFamilies,
   FontSizes,
   FontWeights,
-} from '../../../shared/style/constants'
+} from 'shared/style/constants'
 
 export default {
   title: 'Atoms/Text',

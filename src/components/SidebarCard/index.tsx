@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Text } from 'components/Text'
+import { Text } from 'components'
 import { FontFamilies, FontSizes } from 'shared/style/constants'
 
 import { StyledSidebarCard } from './typescript/sidebarCard.style'

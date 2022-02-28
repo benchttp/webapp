@@ -1,10 +1,9 @@
 import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
-import { SidebarCard } from 'components'
+import { SidebarCard, TextInput } from 'components'
+import { Icons } from 'shared/icons'
 
-import { Icons } from '../../shared/icons'
-import { TextInput } from '../Inputs/TextInput'
 import { handleCardClick, onChange } from './typescript/sidebar.helpers'
 import { useSidebar } from './typescript/sidebar.hook'
 import { StyledSidebar } from './typescript/sidebar.styles'

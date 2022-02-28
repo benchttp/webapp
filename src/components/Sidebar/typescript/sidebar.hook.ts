@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
-import { CustomFunction } from '../../../shared/helpers/types'
-import { debounce } from '../../../shared/helpers/utils'
+
+import { CustomFunction } from 'shared/helpers/types'
+import { debounce } from 'shared/helpers/utils'
 
 export const useSidebar: CustomFunction<
   void,
