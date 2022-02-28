@@ -7,3 +7,11 @@ export const debounce = (fn: Function, ms: number) => {
     timeoutId = setTimeout(() => fn.apply(this, args), ms)
   }
 }
+
+export const getInitials = (str: string) => {
+  return str
+    .split(' ')
+    .map((word) => word.charAt(0))
+    .join('')
+    .toUpperCase()
+}
