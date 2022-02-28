@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { BaseSyntheticEvent } from 'react'
 import { UseControllerProps } from 'react-hook-form'
 
