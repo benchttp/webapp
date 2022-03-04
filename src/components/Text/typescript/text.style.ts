@@ -5,7 +5,8 @@ import {
   FONT_SIZES,
   FONT_FAMILIES,
   FONT_WEIGHTS,
-} from '../../../shared/style/constants'
+} from 'shared/style/constants'
+
 import { IProps } from './text.types'
 
 export const StyledText = styled('p')<IProps>`

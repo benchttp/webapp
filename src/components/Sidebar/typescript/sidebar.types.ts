@@ -1,3 +1,13 @@
-import { IStandardProps } from '../../../shared/helpers/types'
+import { IStandardProps } from 'shared/helpers/types'
 
-export type IProps = IStandardProps
+export interface IProps extends IStandardProps {
+  tests: ITest[]
+}
+
+interface ITest {
+  name: string
+}
+
+export interface IForm {
+  search: string
+}

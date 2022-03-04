@@ -1,3 +1,3 @@
-import { IStandardProps } from '../../../shared/helpers/types'
+import { IStandardProps } from 'shared/helpers/types'
 
 export type IProps = IStandardProps

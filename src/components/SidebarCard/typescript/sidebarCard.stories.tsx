@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import React from 'react'
 
-import { SidebarCard } from '..'
+import { SidebarCard } from 'components'
 
 export default {
   title: 'Atoms/SidebarCard',

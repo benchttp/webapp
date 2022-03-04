@@ -23,6 +23,10 @@ plugins:
 settings:
   react:
     version: detect
+  import/resolver:
+    node:
+      paths:
+        - src
 ignorePatterns: [/public, /build]
 
 rules:
@@ -35,16 +39,15 @@ rules:
   import/order:
     - error
     - groups:
-      - builtin
-      - external
-      - internal
-      - [parent, sibling]
-      - index
+        - builtin
+        - external
+        - internal
+        - [parent, sibling]
+        - index
       newlines-between: always
       alphabetize:
         order: asc
         caseInsensitive: true
-  
 
   # React rules
   react/react-in-jsx-scope: off
@@ -65,6 +68,12 @@ rules:
       prefix: [I]
     - selector: enum
       format: [PascalCase]
+
+  # Ban types
+  '@typescript-eslint/ban-types':
+    - error
+    - types:
+        Function: false
 
 overrides:
   # Script / Node files
