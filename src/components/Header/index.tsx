@@ -1,10 +1,10 @@
 import { FC } from 'react'
 
 import { Text, Avatar } from 'components'
+import { BENCHTTP } from 'shared/helpers/constants'
 import { IconLightning } from 'shared/icons/IconLightning'
 import { Colors, FontFamilies, FontWeights } from 'shared/style/constants'
 
-import { BENCHTTP } from './typescript/sidebar.constants'
 import { StyledHeader } from './typescript/sidebar.styles'
 import { IProps } from './typescript/sidebar.types'
 
