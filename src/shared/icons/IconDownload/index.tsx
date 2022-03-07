@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 import { ISVGProps } from 'shared/helpers/types'
-import { COLORS } from 'shared/style/constants'
+import { Colors, COLORS } from 'shared/style/constants'
 
 export const IconDownload: FC<ISVGProps> = ({
   color,
@@ -18,7 +18,7 @@ export const IconDownload: FC<ISVGProps> = ({
       height={height}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={COLORS[color]}
+      stroke={color ? COLORS[color] : COLORS[Colors.WHITE]}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
