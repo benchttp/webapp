@@ -5,8 +5,8 @@ import { BENCHTTP } from 'shared/helpers/constants'
 import { IconLightning } from 'shared/icons/IconLightning'
 import { Colors, FontFamilies, FontWeights } from 'shared/style/constants'
 
-import { StyledHeader } from './typescript/sidebar.styles'
-import { IProps } from './typescript/sidebar.types'
+import { StyledHeader } from './core/sidebar.styles'
+import { IProps } from './core/sidebar.types'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props

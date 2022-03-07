@@ -3,8 +3,8 @@ import { FC } from 'react'
 import { Text } from 'components'
 import { FontFamilies, FontSizes } from 'shared/style/constants'
 
-import { StyledSidebarCard } from './typescript/sidebarCard.style'
-import { IProps } from './typescript/sidebarCard.types'
+import { StyledSidebarCard } from './core/sidebarCard.style'
+import { IProps } from './core/sidebarCard.types'
 
 export const SidebarCard: FC<IProps> = (props) => {
   const { children, active, onClick } = props
