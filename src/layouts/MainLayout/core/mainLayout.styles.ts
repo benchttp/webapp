@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
-import { StyledHeader } from '../../../components/Header/typescript/sidebar.styles'
-import { StyledSidebar } from '../../../components/Sidebar/typescript/sidebar.styles'
+import { StyledHeader } from 'components/Header/core/sidebar.styles'
+import { StyledSidebar } from 'components/Sidebar/core/sidebar.styles'
 
 export const StyledMainLayout = styled['div']`
   height: 100vh;

@@ -23,7 +23,11 @@ plugins:
 settings:
   react:
     version: detect
-ignorePatterns: [/public]
+  import/resolver:
+    node:
+      paths:
+        - src
+ignorePatterns: [/public, /build]
 
 rules:
   # Base rules
@@ -31,19 +35,19 @@ rules:
 
   # Import rules
   import/newline-after-import: error
+  import/no-default-export: error
   import/order:
     - error
     - groups:
-      - builtin
-      - external
-      - internal
-      - [parent, sibling]
-      - index
+        - builtin
+        - external
+        - internal
+        - [parent, sibling]
+        - index
       newlines-between: always
       alphabetize:
         order: asc
         caseInsensitive: true
-  
 
   # React rules
   react/react-in-jsx-scope: off
@@ -65,6 +69,12 @@ rules:
     - selector: enum
       format: [PascalCase]
 
+  # Ban types
+  '@typescript-eslint/ban-types':
+    - error
+    - types:
+        Function: false
+
 overrides:
   # Script / Node files
   - files: [./*.js]
@@ -73,3 +83,6 @@ overrides:
     rules:
       react-hooks/rules-of-hooks: off
       '@typescript-eslint/no-var-requires': off
+  - files: ['*.stories.tsx']
+    rules:
+      import/no-default-export: off

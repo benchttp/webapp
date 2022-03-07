@@ -1,19 +1,17 @@
 import { FC } from 'react'
 
-import Header from '../../components/Header'
-import Sidebar from '../../components/Sidebar'
-import { StyledMainLayout } from './typescript/mainLayout.styles'
+import { Header, Sidebar } from 'components'
 
-const MainLayout: FC = ({ children }) => {
+import { StyledMainLayout } from './core/mainLayout.styles'
+
+export const MainLayout: FC = ({ children }) => {
   return (
     <StyledMainLayout className="f f-direction-column">
       <Header />
       <div className="main f f-jc-space-b">
-        <Sidebar />
+        <Sidebar tests={[{ name: 'Auth0' }, { name: 'JWT' }]} />
         <div className="content p-4">{children}</div>
       </div>
     </StyledMainLayout>
   )
 }
-
-export default MainLayout

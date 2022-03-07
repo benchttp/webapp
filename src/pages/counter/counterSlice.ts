@@ -79,4 +79,5 @@ export const incrementIfOdd =
     }
   }
 
+// eslint-disable-next-line
 export default counterSlice.reducer
