@@ -1,22 +1,20 @@
-import { Counter } from 'pages/counter/Counter'
-import { FC, useEffect, useRef, useState } from 'react'
-import { AiOutlineDown} from "@react-icons/all-files/ai/AiOutlineDown";
-import { AiOutlineUp } from "@react-icons/all-files/ai/AiOutlineUp";
-import { Col, Row, StyledCardRequest } from './typescript/cardRequest.styles'
+import { FC, useState } from 'react';
+import { AiOutlineDown} from '@react-icons/all-files/ai/AiOutlineDown';
+import { AiOutlineUp } from '@react-icons/all-files/ai/AiOutlineUp';
+import { Col, Row, StyledCardRequest } from './typescript/cardRequest.styles';
 
 interface ICardRequestProps {
   
-  // Click  cardRequest handler    
   onClick?: () => void
 
 }
 
 
-const Dropdown: FC<ICardRequestProps> = ({ ...props }) => {
-  const [counter, setCounter] = useState<Number>(1)
-  const [responseCode, setResponseCode] = useState<Number>(200)
-  const [responseDuration, setResponseDuration] = useState<Number>(1152)
-  const [param,setParam] = useState<Number>(1249)
+const cardRequest: FC<ICardRequestProps> = ({ ...props }) => {
+  const [counter, setCounter] = useState<number>(1);
+  const [responseCode, setResponseCode] = useState<number>(200)
+  const [responseDuration, setResponseDuration] = useState<number>(1152)
+  const [param,setParam] = useState<number>(1249)
   const [RawResponseActive, setRawResponseActive] = useState<boolean>(false)
   
 
@@ -27,12 +25,10 @@ const Dropdown: FC<ICardRequestProps> = ({ ...props }) => {
   return (
     <StyledCardRequest>
       <div className={'wrapper'}>
-      
       <Row>    
          <Col>
-         <p className='counter'>#{counter}</p>
-           
-         </Col>
+            <p className="counter">#{counter}</p>
+          </Col>
           <Col>
           <Row>
            <p className='roundedColorResponse'/>
@@ -58,9 +54,6 @@ const Dropdown: FC<ICardRequestProps> = ({ ...props }) => {
           </button>
         
           {RawResponseActive ? <AiOutlineUp/>:<AiOutlineDown/>}
-         
-
-        
          </Col>
          </div>
 
@@ -71,4 +64,4 @@ const Dropdown: FC<ICardRequestProps> = ({ ...props }) => {
   )
 }
 
-export default Dropdown
+export default cardRequest
