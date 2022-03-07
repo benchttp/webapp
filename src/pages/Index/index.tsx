@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Dropdown } from 'components/Dropdown'
+import { Dropdown } from 'components'
 
 export const Index: FC = () => {
   return (

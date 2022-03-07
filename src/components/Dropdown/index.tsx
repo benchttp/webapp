@@ -40,9 +40,7 @@ export const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
     setDropdownActive(!dropdownActive)
   }
 
-  function compareTestWith(testName: string) {
-    console.log(`Compare ${testName}`)
-
+  function compareTestWith() {
     setDropdownActive(false)
   }
 
@@ -51,7 +49,7 @@ export const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
       <p
         className={'dropdown-item'}
         key={index}
-        onClick={() => compareTestWith(benchmarkName)}
+        onClick={() => compareTestWith()}
       >
         {benchmarkName}
       </p>
