@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Dropdown from '../../components/cardRequest/index'
 
 import { Dropdown, Text, CardConfig } from 'components'
 import { FontFamilies, FontSizes } from 'shared/style/constants'
