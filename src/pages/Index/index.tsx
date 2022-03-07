@@ -1,5 +1,11 @@
 import { FC } from 'react'
 
+import { Dropdown } from 'components'
+
 export const Index: FC = () => {
-  return <p>Index</p>
+  return (
+    <>
+      <Dropdown />
+    </>
+  )
 }
