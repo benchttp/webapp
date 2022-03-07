@@ -7,6 +7,7 @@ import { Colors, FontFamilies, FontWeights } from 'shared/style/constants'
 
 import { StyledHeader } from './core/sidebar.styles'
 import { IProps } from './core/sidebar.types'
+import { PrimaryButton } from 'components/PrimaryButton'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
@@ -32,7 +33,12 @@ export const Header: FC<IProps> = (props) => {
           {BENCHTTP}
         </Text>
       </div>
-      <Avatar username="John Doe" />
+      <div className="f">
+        <a href="#">
+          <PrimaryButton className="mr-4">Generate config</PrimaryButton>
+        </a>
+        <Avatar username="John Doe" />
+      </div>
     </StyledHeader>
   )
 }
