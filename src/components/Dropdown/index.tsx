@@ -31,7 +31,7 @@ const benchmarksToCompare = [
   'Test 9',
 ]
 
-const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
+export const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
   const [dropdownActive, setDropdownActive] = useState<boolean>(false)
   const refDropdownDiv = useRef<HTMLDivElement>(null)
   const { onClickOutside } = props
@@ -98,5 +98,3 @@ const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
     </StyledDropdown>
   )
 }
-
-export default Dropdown
