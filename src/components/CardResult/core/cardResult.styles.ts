@@ -1,4 +1,10 @@
-import { BORDER_RADIUS, FONT_SIZES, FontSizes, COLORS, SPACINGS } from 'shared/style/constants'
+import {
+  BORDER_RADIUS,
+  FONT_SIZES,
+  FontSizes,
+  COLORS,
+  SPACINGS,
+} from 'shared/style/constants'
 import styled from 'styled-components'
 
 export const StyledCardResult = styled('div')`

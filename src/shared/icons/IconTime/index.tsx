@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { ISVGProps } from 'shared/helpers/types'
 
 export const IconTime: FC<ISVGProps> = ({
-  color,
   className,
   width = 52,
   height = 52,

@@ -2,8 +2,8 @@ import { Card, Text } from 'components'
 import { useState, FC } from 'react'
 import { FontSizes, FontWeights, FontFamilies } from 'shared/style/constants'
 import { Settings } from 'react-feather'
-import { StyledCardResult } from './core/card.styles'
-import { IProps } from './core/card.types'
+import { StyledCardResult } from './core/cardResult.styles'
+import { IProps } from './core/cardResult.types'
 
 export const CardResult: FC<IProps> = ({
   icon,
