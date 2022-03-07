@@ -7,14 +7,10 @@ import { StyledSidebarCard } from './core/sidebarCard.style'
 import { IProps } from './core/sidebarCard.types'
 
 export const SidebarCard: FC<IProps> = (props) => {
-  const { children, active, onClick } = props
+  const { children } = props
 
   return (
-    <StyledSidebarCard
-      className="pt-2 pb-2 pl-3 pr-3"
-      active={active}
-      onClick={onClick}
-    >
+    <StyledSidebarCard {...props} className="pt-2 pb-2 pl-3 pr-3">
       <Text className="m-0" font={FontFamilies.INTER} size={FontSizes.BASE}>
         {children}
       </Text>

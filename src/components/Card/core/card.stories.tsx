@@ -1,12 +1,17 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Card } from 'components'
+import { hideControl } from 'shared/helpers/storybook'
 
 export default {
   title: 'Atoms/Card',
   component: Card,
   args: {
-    children: <p>Card content</p>,
+    children: 'Card content',
+  },
+  argTypes: {
+    id: hideControl,
+    className: hideControl,
   },
 } as ComponentMeta<typeof Card>
 

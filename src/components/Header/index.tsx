@@ -5,14 +5,15 @@ import { BENCHTTP } from 'shared/helpers/constants'
 import { IconLightning } from 'shared/icons/IconLightning'
 import { Colors, FontFamilies, FontWeights } from 'shared/style/constants'
 
-import { StyledHeader } from './core/sidebar.styles'
-import { IProps } from './core/sidebar.types'
+import { StyledHeader } from './core/header.styles'
+import { IProps } from './core/header.types'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
 
   return (
     <StyledHeader
+      {...props}
       className={`${
         className || ''
       } pt-3 pb-3 pl-4 pr-4 f f-ai-center f-jc-space-b`}

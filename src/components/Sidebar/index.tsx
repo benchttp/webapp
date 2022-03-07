@@ -22,7 +22,7 @@ export const Sidebar: FC<IProps> = (props) => {
   const { debouncedHandleSearchInputChange } = useSidebar()
 
   return (
-    <StyledSidebar className={`${className || ''} p-4`}>
+    <StyledSidebar {...props} className={`${className || ''} p-4`}>
       <TextInput
         control={control}
         name="search"
