@@ -3,16 +3,16 @@ import { BORDER_RADIUS, COLORS, SPACINGS } from 'shared/style/constants'
 
 export const StyledPrimaryButton = styled('button')`
   padding: ${SPACINGS[2]};
-  background-color: ${COLORS.primary};
-  color: ${COLORS.white};
+  background-color: transparent;
+  color: ${COLORS.primary};
   border-radius: ${BORDER_RADIUS[1]};
   cursor: pointer;
   border: 1px solid ${COLORS.primary};
   transition: color 150ms, background-color 150ms, transform 100ms;
 
   &:hover {
-    background-color: transparent;
-    color: ${COLORS.primary};
+    background-color: ${COLORS.primary};
+    color: ${COLORS.white};
   }
 
   &:active {
