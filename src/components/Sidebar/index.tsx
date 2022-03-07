@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 
 import { SidebarCard, TextInput } from 'components'
 import { Icons } from 'shared/icons'
+import { Colors } from 'shared/style/constants'
 
 import { handleCardClick, onChange } from './typescript/sidebar.helpers'
 import { useSidebar } from './typescript/sidebar.hook'
@@ -28,6 +29,7 @@ export const Sidebar: FC<IProps> = (props) => {
         placeholder="Search ..."
         hasIcon
         icon={Icons.search}
+        iconColor={Colors.WHITE}
         submitOnChange
         onChange={onChange(handleSubmit, debouncedHandleSearchInputChange)}
         className="mb-4"

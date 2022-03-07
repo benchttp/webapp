@@ -18,6 +18,7 @@ export enum Colors {
   WHITE = 'white',
   GREY1 = 'grey1',
   GREY2 = 'grey2',
+  GREY3 = 'grey3',
   GREEN = 'green',
   BLUE = 'blue',
   POST = 'POST',
@@ -33,6 +34,7 @@ export const COLORS = {
   [Colors.WHITE]: '#FFFBFF',
   [Colors.GREY1]: '#383B46',
   [Colors.GREY2]: '#808080',
+  [Colors.GREY3]: '#C4C4C4',
   [Colors.GREEN]: '#2ECC71',
   [Colors.BLUE]: '#6D8A96',
   [Colors.POST]: '#605DE3',
@@ -74,4 +76,14 @@ export const FONT_WEIGHTS = {
   [FontWeights.BOLD]: '700',
   [FontWeights.SEMI]: '600',
   [FontWeights.MEDIUM]: '500',
+}
+
+export const SHADOWS = ['0px 5px 10px rgba(0, 0, 0, 0.1)']
+
+export enum ZIndexs {
+  HEADER = 'header',
+}
+
+export const Z_INDEXS = {
+  [ZIndexs.HEADER]: 1,
 }
