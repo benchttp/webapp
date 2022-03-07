@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
     background: ${COLORS.black};
+    line-height: 1.5;
 }
 
 ${SPACINGS.map(
@@ -163,9 +164,6 @@ time, mark, audio, video {
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
-}
-body {
-	line-height: 1;
 }
 ol, ul {
 	list-style: none;

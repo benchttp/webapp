@@ -2,28 +2,29 @@ import { FC } from 'react'
 
 import { Text, Avatar } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
-import { IconLightning } from 'shared/icons/IconLightning'
-import { Colors, FontFamilies, FontWeights } from 'shared/style/constants'
+import {
+  COLORS,
+  Colors,
+  FontFamilies,
+  FontWeights,
+} from 'shared/style/constants'
 
-import { StyledHeader } from './core/sidebar.styles'
-import { IProps } from './core/sidebar.types'
+import { StyledHeader } from './core/header.styles'
+import { IProps } from './core/header.types'
+import { Zap } from 'react-feather'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
 
   return (
     <StyledHeader
+      {...props}
       className={`${
         className || ''
       } pt-3 pb-3 pl-4 pr-4 f f-ai-center f-jc-space-b`}
     >
       <div className="f f-center">
-        <IconLightning
-          height={40}
-          width={40}
-          color={Colors.PRIMARY}
-          className="mr-1"
-        />
+        <Zap className="mr-1" color={COLORS[Colors.PRIMARY]} size={40} />
         <Text
           color={Colors.PRIMARY}
           weight={FontWeights.BOLD}

@@ -1,7 +1,6 @@
 import { createElement, FC } from 'react'
 import { useController } from 'react-hook-form'
 
-import { ICONS } from 'shared/icons'
 import { Colors } from 'shared/style/constants'
 
 import { handleChange } from './core/textInput.helpers'
@@ -42,7 +41,7 @@ export const TextInput: FC<IProps> = (props) => {
           type="text"
         />
         {icon &&
-          createElement(ICONS[icon], {
+          createElement(icon, {
             color: iconColor,
             className: 'icon',
           })}

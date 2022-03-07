@@ -3,8 +3,8 @@ import { useForm } from 'react-hook-form'
 
 import { TextInput } from 'components'
 import { hideControl } from 'shared/helpers/storybook'
-import { Icons } from 'shared/icons'
 import { Colors } from 'shared/style/constants'
+import { Search } from 'react-feather'
 
 export default {
   title: 'Atoms/TextInput',
@@ -40,7 +40,7 @@ SearchInput.args = {
   submitOnChange: true,
   name: 'search',
   hasIcon: true,
-  icon: Icons.search,
+  icon: Search,
   iconPosition: 'left',
   iconColor: Colors.GREY2,
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { StyledHeader } from 'components/Header/core/sidebar.styles'
+import { StyledHeader } from 'components/Header/core/header.styles'
 import { StyledSidebar } from 'components/Sidebar/core/sidebar.styles'
 
 export const StyledMainLayout = styled['div']`
