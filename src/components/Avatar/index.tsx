@@ -5,9 +5,11 @@ import { getInitials } from 'shared/helpers/utils'
 import { StyledAvatar } from './core/avatar.styles'
 import { IProps } from './core/avatar.types'
 
-export const Avatar: FC<IProps> = ({ username }) => {
+export const Avatar: FC<IProps> = (props) => {
+  const { username } = props
+
   return (
-    <StyledAvatar className="f f-center">
+    <StyledAvatar {...props} className="f f-center">
       <p>{getInitials(username)}</p>
     </StyledAvatar>
   )

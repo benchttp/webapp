@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import React from 'react'
 
 import { Text } from 'components'
+import { hideControl } from 'shared/helpers/storybook'
 import {
   Colors,
   FontFamilies,
@@ -18,6 +18,10 @@ export default {
     size: FontSizes.BASE,
     weight: FontWeights.MEDIUM,
     color: Colors.WHITE,
+  },
+  argTypes: {
+    className: hideControl,
+    id: hideControl,
   },
 } as ComponentMeta<typeof Text>
 

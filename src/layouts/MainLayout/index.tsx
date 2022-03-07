@@ -4,9 +4,11 @@ import { Header, Sidebar } from 'components'
 
 import { StyledMainLayout } from './core/mainLayout.styles'
 
-export const MainLayout: FC = ({ children }) => {
+export const MainLayout: FC = (props) => {
+  const { children } = props
+
   return (
-    <StyledMainLayout className="f f-direction-column">
+    <StyledMainLayout {...props} className="f f-direction-column">
       <Header />
       <div className="main f f-jc-space-b">
         <Sidebar tests={[{ name: 'Auth0' }, { name: 'JWT' }]} />

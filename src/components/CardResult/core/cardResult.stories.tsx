@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CardResult } from 'components'
-import { IconTime } from 'shared/icons/IconTime'
+import { Clock } from 'react-feather'
 
 export default {
   title: 'Atoms/CardResult',
   component: CardResult,
   args: {
-    icon: <IconTime />,
+    icon: Clock,
     unit: 'ms',
     number: 500,
     text: <div>of request were successfull</div>,
