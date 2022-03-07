@@ -8,7 +8,7 @@ interface ICardRequestProps {
   onClick?: () => void
 }
 
-const CardRequest: FC<ICardRequestProps> = ({ ...props }) => {
+export const CardRequest: FC<ICardRequestProps> = ({ ...props }) => {
   const [counter, setCounter] = useState<number>(1)
   const [responseCode, setResponseCode] = useState<number>(200)
   const [responseDuration, setResponseDuration] = useState<number>(1152)
@@ -57,5 +57,3 @@ const CardRequest: FC<ICardRequestProps> = ({ ...props }) => {
     </StyledCardRequest>
   )
 }
-
-export default CardRequest

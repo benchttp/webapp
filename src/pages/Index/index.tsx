@@ -1,8 +1,6 @@
 import { FC } from 'react'
 
-import Dropdown from '../../components/cardRequest/index'
-
-import { Dropdown, Text, CardConfig } from 'components'
+import { Dropdown, Text, CardConfig, CardRequest } from 'components'
 import { FontFamilies, FontSizes } from 'shared/style/constants'
 import { MainLayout } from 'layouts/MainLayout'
 
@@ -14,6 +12,7 @@ export const Index: FC = () => {
         Config
       </Text>
       <CardConfig />
+      <CardRequest />
     </MainLayout>
   )
 }
