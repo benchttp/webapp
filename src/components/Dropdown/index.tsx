@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef, useState } from 'react'
 
-import { StyledDropdown } from './typescript/dropdown.styles'
+import { StyledDropdown } from './core/dropdown.styles'
 
 interface IDropdownProps {
   /**
