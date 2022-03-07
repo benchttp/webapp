@@ -1,8 +1,10 @@
 import { FC, useEffect, useRef, useState } from 'react'
 
+import { IStandardProps } from 'shared/helpers/types'
+
 import { StyledDropdown } from './core/dropdown.styles'
 
-interface IDropdownProps {
+interface IDropdownProps extends IStandardProps {
   /**
    * Others test to compare with
    */
@@ -34,7 +36,7 @@ const benchmarksToCompare = [
 export const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
   const [dropdownActive, setDropdownActive] = useState<boolean>(false)
   const refDropdownDiv = useRef<HTMLDivElement>(null)
-  const { onClickOutside } = props
+  const { onClickOutside, className } = props
 
   function openDropdown() {
     setDropdownActive(!dropdownActive)
@@ -73,13 +75,12 @@ export const Dropdown: FC<IDropdownProps> = ({ ...props }) => {
   }, [onClickOutside])
 
   return (
-    <StyledDropdown>
+    <StyledDropdown className={`${className || ''}`}>
       <div>
         <button
           type="button"
           className={'storybook-dropdown'}
           onClick={() => openDropdown()}
-          {...props}
         >
           + Compare with another test
         </button>
