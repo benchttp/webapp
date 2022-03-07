@@ -1,5 +1,4 @@
 import { FC } from 'react'
-
 import { ISVGProps } from 'shared/helpers/types'
 import { COLORS } from 'shared/style/constants'
 
@@ -17,7 +16,7 @@ export const IconSearch: FC<ISVGProps> = ({
       height={height}
       viewBox="0 0 24 24"
       fill="none"
-      stroke={COLORS[color]}
+      stroke={color ? COLORS[color] : COLORS['black']}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"

@@ -8,7 +8,7 @@ export interface IStandardProps {
 export type CustomFunction<Params, Return> = (params: Params) => Return
 
 export interface ISVGProps extends IStandardProps {
-  color: Colors
+  color?: Colors
   width?: number
   height?: number
 }
