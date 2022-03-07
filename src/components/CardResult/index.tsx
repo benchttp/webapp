@@ -1,7 +1,7 @@
 import { Card, Text } from 'components'
 import { useState, FC } from 'react'
-import { FontSizes, FontWeights, FontFamilies } from 'shared/style/constants'
 import { Settings } from 'react-feather'
+import { FontSizes, FontWeights, FontFamilies } from 'shared/style/constants'
 import { StyledCardResult } from './core/cardResult.styles'
 import { IProps } from './core/cardResult.types'
 
@@ -37,7 +37,7 @@ export const CardResult: FC<IProps> = ({
                 }
                 className="toggle-options"
               >
-                <Settings width={22} color="#fff" />
+                <Settings width={18} color="#fff" />
               </div>
               {optionsDropdownVisible && (
                 <div className="dropdown">
