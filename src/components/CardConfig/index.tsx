@@ -10,10 +10,10 @@ export const CardConfig: FC = () => {
     <Card>
       <ExpansionPanel>
         <ExpansionPanel.Header>
-          <CardConfigHeader className="mb-3" />
+          <CardConfigHeader />
         </ExpansionPanel.Header>
         <ExpansionPanel.Content>
-          <CardConfigContent />
+          <CardConfigContent className="mt-3" />
         </ExpansionPanel.Content>
       </ExpansionPanel>
     </Card>

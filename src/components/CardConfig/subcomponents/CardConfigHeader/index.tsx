@@ -2,7 +2,6 @@ import { FC, useContext } from 'react'
 
 import { ExpansionPanelContext, Tag, Text } from 'components'
 import { HttpMethods } from 'shared/helpers/constants'
-import { IconDownload } from 'shared/icons/IconDownload'
 import {
   Colors,
   FontFamilies,
@@ -10,8 +9,8 @@ import {
   FontSizes,
 } from 'shared/style/constants'
 
-import { handleDownloadConfigClick } from './core/cardConfigHeader.helpers'
 import { IProps } from './core/cardConfigHeader.types'
+import { Download } from 'react-feather'
 
 export const CardConfigHeader: FC<IProps> = (props) => {
   const { className } = props
@@ -27,10 +26,7 @@ export const CardConfigHeader: FC<IProps> = (props) => {
             {HttpMethods.POST}
           </Tag>
         </div>
-        <IconDownload
-          onClick={handleDownloadConfigClick}
-          color={Colors.WHITE}
-        />
+        <Download />
       </div>
       <div className="f f-jc-space-b f-ai-end">
         <div className="f f-ai-center">

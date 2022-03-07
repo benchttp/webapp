@@ -1,5 +1,12 @@
 import { FC } from 'react'
 
-export const CardConfigContent: FC = () => {
-  return <p>test</p>
+import { IProps } from './core/cardConfigContent.types'
+
+export const CardConfigContent: FC<IProps> = (props) => {
+  const { className } = props
+  return (
+    <div className={className || ''}>
+      <p>test</p>
+    </div>
+  )
 }

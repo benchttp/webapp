@@ -2,13 +2,13 @@ import { FC, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 import { SidebarCard, TextInput } from 'components'
-import { Icons } from 'shared/icons'
 import { Colors } from 'shared/style/constants'
 
 import { handleCardClick, onChange } from './core/sidebar.helpers'
 import { useSidebar } from './core/sidebar.hook'
 import { StyledSidebar } from './core/sidebar.styles'
 import { IForm, IProps } from './core/sidebar.types'
+import { Search } from 'react-feather'
 
 export const Sidebar: FC<IProps> = (props) => {
   const { className, tests } = props
@@ -28,7 +28,7 @@ export const Sidebar: FC<IProps> = (props) => {
         name="search"
         placeholder="Search ..."
         hasIcon
-        icon={Icons.search}
+        icon={Search}
         iconColor={Colors.WHITE}
         submitOnChange
         onChange={onChange(handleSubmit, debouncedHandleSearchInputChange)}
