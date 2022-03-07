@@ -12,6 +12,7 @@ import {
 import { StyledHeader } from './core/header.styles'
 import { IProps } from './core/header.types'
 import { Zap } from 'react-feather'
+import { StyledPrimaryButton } from 'components/PrimaryButton/core/primaryButton.styles'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
@@ -33,7 +34,12 @@ export const Header: FC<IProps> = (props) => {
           {BENCHTTP}
         </Text>
       </div>
-      <Avatar username="John Doe" />
+      <div className="f">
+        <StyledPrimaryButton className="mr-4">
+          Generate config
+        </StyledPrimaryButton>
+        <Avatar username="John Doe" />
+      </div>
     </StyledHeader>
   )
 }
