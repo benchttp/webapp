@@ -5,10 +5,10 @@ import { SidebarCard, TextInput } from 'components'
 import { Icons } from 'shared/icons'
 import { Colors } from 'shared/style/constants'
 
-import { handleCardClick, onChange } from './typescript/sidebar.helpers'
-import { useSidebar } from './typescript/sidebar.hook'
-import { StyledSidebar } from './typescript/sidebar.styles'
-import { IForm, IProps } from './typescript/sidebar.types'
+import { handleCardClick, onChange } from './core/sidebar.helpers'
+import { useSidebar } from './core/sidebar.hook'
+import { StyledSidebar } from './core/sidebar.styles'
+import { IForm, IProps } from './core/sidebar.types'
 
 export const Sidebar: FC<IProps> = (props) => {
   const { className, tests } = props

@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 import { getInitials } from 'shared/helpers/utils'
 
-import { StyledAvatar } from './typescript/avatar.styles'
-import { IProps } from './typescript/avatar.types'
+import { StyledAvatar } from './core/avatar.styles'
+import { IProps } from './core/avatar.types'
 
 export const Avatar: FC<IProps> = ({ username }) => {
   return (

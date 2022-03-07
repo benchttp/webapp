@@ -2,7 +2,7 @@ import { FC } from 'react'
 
 import { Header, Sidebar } from 'components'
 
-import { StyledMainLayout } from './typescript/mainLayout.styles'
+import { StyledMainLayout } from './core/mainLayout.styles'
 
 export const MainLayout: FC = ({ children }) => {
   return (

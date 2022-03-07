@@ -4,9 +4,9 @@ import { useController } from 'react-hook-form'
 import { ICONS } from 'shared/icons'
 import { Colors } from 'shared/style/constants'
 
-import { handleChange } from './typescript/textInput.helpers'
-import { IProps } from './typescript/textInput.interfaces'
-import { StyledTextInput } from './typescript/textInput.styles'
+import { handleChange } from './core/textInput.helpers'
+import { IProps } from './core/textInput.interfaces'
+import { StyledTextInput } from './core/textInput.styles'
 
 export const TextInput: FC<IProps> = (props) => {
   const {

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
-import { StyledText } from './typescript/text.style'
-import { IProps } from './typescript/text.types'
+import { StyledText } from './core/text.style'
+import { IProps } from './core/text.types'
 
 export const Text: FC<IProps> = (props) => {
   const { children } = props
