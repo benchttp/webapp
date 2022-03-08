@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AiOutlineDown } from '@react-icons/all-files/ai/AiOutlineDown'
 import { AiOutlineUp } from '@react-icons/all-files/ai/AiOutlineUp'
 import { FC, useState } from 'react'
