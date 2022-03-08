@@ -80,10 +80,10 @@ export const FONT_WEIGHTS = {
 
 export const SHADOWS = ['0px 5px 10px rgba(0, 0, 0, 0.1)']
 
-export enum ZIndexs {
+export enum ZIndexes {
   HEADER = 'header',
 }
 
-export const Z_INDEXS = {
-  [ZIndexs.HEADER]: 1,
+export const Z_INDEXES = {
+  [ZIndexes.HEADER]: 1,
 }
