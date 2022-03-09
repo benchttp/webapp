@@ -7,8 +7,31 @@ import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
 
 export const CardConfigContent: FC<IProps> = (props) => {
   const { className } = props
+
+  const headerContent = Object.entries({ key0: 'val0', key1: 'val1' })
+
+  const headersList = headerContent.map(([key, value], index) => {
+    return (
+      <tr key={index} className="f keyValueCouple">
+        <td className="keyColumn">
+          <Text>{key}</Text>
+        </td>
+        <td className="valueColumn">
+          <Text>{value}</Text>
+        </td>
+      </tr>
+    )
+  })
+
   return (
     <StyledCardConfigContent className={className || ''}>
+      <Text
+        font={FontFamilies.POPPINS}
+        weight={FontWeights.BOLD}
+        size={FontSizes.LARGE}
+      >
+        Options
+      </Text>
       <div className="f mb-3">
         <div className="mr-7">
           <Text
@@ -30,19 +53,19 @@ export const CardConfigContent: FC<IProps> = (props) => {
           </Text>
           <Text>Interval</Text>
         </div>
-        <div className="cardConfigContentHeadersContainer">
-          <Text
-            font={FontFamilies.POPPINS}
-            weight={FontWeights.BOLD}
-            size={FontSizes.LARGE}
-          >
-            Headers
-          </Text>
-          <div className="f pl-6 pr-6 f-jc-space-a">
-            <Text>key0</Text>
-            <Text>val0, val1</Text>
-          </div>
-        </div>
+      </div>
+      <div className="cardConfigContentHeadersContainer">
+        <Text
+          font={FontFamilies.POPPINS}
+          weight={FontWeights.BOLD}
+          size={FontSizes.LARGE}
+          className="mb-2"
+        >
+          Headers
+        </Text>
+        <table className="f pl-6 pr-6 f-jc-space-a headersListContainer">
+          <tbody>{headersList}</tbody>
+        </table>
       </div>
     </StyledCardConfigContent>
   )
