@@ -5,10 +5,10 @@ export type IProps = IPrimaryButtonProps | IOutlineButtonProps
 
 interface IGenericProps extends IStandardProps {
   appearence?: ButtonAppearence
-  mainColor?: Colors
-  secondaryColor?: Colors
-  hover?: boolean
-  active?: boolean
+  mainColor: Colors
+  secondaryColor: Colors
+  hover: boolean
+  active: boolean
   onClick?: () => void
 }
 

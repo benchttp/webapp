@@ -2,20 +2,13 @@ import styled from 'styled-components'
 import {
   BORDER_RADIUS,
   ButtonAppearence,
-  Colors,
   COLORS,
   SPACINGS,
 } from 'shared/style/constants'
 import { IProps } from './Button.types'
 
 export const StyledButton = styled('button')<IProps>`
-  ${({
-    appearance = ButtonAppearence.PRIMARY,
-    mainColor = Colors.PRIMARY,
-    secondaryColor = Colors.WHITE,
-    hover = true,
-    active = true,
-  }) =>
+  ${({ appearance, mainColor, secondaryColor, hover, active }) =>
     `padding: ${SPACINGS[2]};
     cursor: pointer;
     border-radius: ${BORDER_RADIUS[1]};
@@ -24,7 +17,6 @@ export const StyledButton = styled('button')<IProps>`
     font-weight: 700;
 
     ${
-      // Primary appearence
       appearance === ButtonAppearence.PRIMARY
         ? `background-color: ${COLORS[mainColor]};
         border: 1px solid ${COLORS[mainColor]};
@@ -38,8 +30,7 @@ export const StyledButton = styled('button')<IProps>`
               border: 1px solid ${COLORS[mainColor]};
           `
         }`
-        : // Outline appearence
-          `
+        : `
         background-color: ${COLORS.TRANSPARENT};
         border: 1px solid ${COLORS[mainColor]};
         color: ${COLORS[mainColor]};
