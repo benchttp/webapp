@@ -1,60 +1,20 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { AiOutlineDown } from '@react-icons/all-files/ai/AiOutlineDown'
-import { AiOutlineUp } from '@react-icons/all-files/ai/AiOutlineUp'
-import { FC, useState } from 'react'
+import { ExpansionPanel } from 'components/ExpansionPanel'
+import { FC } from 'react'
+import { CardRequestHeader } from './subcomponent/CardRequestHeader'
+import { IProps } from './core/cardRequest.types'
+import { Card } from 'components/Card'
 
-import { Col, Row, StyledCardRequest } from './typescript/cardRequest.styles'
-
-interface ICardRequestProps {
-  onClick?: () => void
-}
-
-export const CardRequest: FC<ICardRequestProps> = ({ ...props }) => {
-  const [counter, setCounter] = useState<number>(1)
-  const [responseCode, setResponseCode] = useState<number>(200)
-  const [responseDuration, setResponseDuration] = useState<number>(1152)
-  const [param, setParam] = useState<number>(1249)
-  const [RawResponseActive, setRawResponseActive] = useState<boolean>(false)
-
-  function openRawResponse() {
-    setRawResponseActive(!RawResponseActive)
-    console.log(RawResponseActive)
-  }
+export const CardRequest: FC<IProps> = (props) => {
   return (
-    <StyledCardRequest>
-      <div className={'wrapper'}>
-        <Row>
-          <Col>
-            <p className="counter">#{counter}</p>
-          </Col>
-          <Col>
-            <Row>
-              <p className="roundedColorResponse" />
-              <p className="responseCode">{responseCode}</p>
-            </Row>
-          </Col>
-          <Col>
-            <p className="responseDuration">{responseDuration} ms</p>
-          </Col>
-          <Col>
-            <p className="responseDuration">{param} B</p>
-          </Col>
-          <div className="rawResponseDiv">
-            <Col>
-              <button
-                type="button"
-                className={'rawResponseButton'}
-                onClick={() => openRawResponse()}
-                {...props}
-              >
-                See raw response
-              </button>
-
-              {RawResponseActive ? <AiOutlineUp /> : <AiOutlineDown />}
-            </Col>
-          </div>
-        </Row>
-      </div>
-    </StyledCardRequest>
+    <Card>
+      <ExpansionPanel>
+        <ExpansionPanel.Header>
+          <CardRequestHeader {...props} />
+        </ExpansionPanel.Header>
+        <ExpansionPanel.Content>
+          <p>test</p>
+        </ExpansionPanel.Content>
+      </ExpansionPanel>
+    </Card>
   )
 }
