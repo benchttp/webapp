@@ -96,6 +96,10 @@ ${BORDER_RADIUS.map(
     justify-content: space-between;
 }
 
+.f-jc-space-a {
+    justify-content: space-around;
+}
+
 .f-ai-start {
     align-items: flex-start;
 }
