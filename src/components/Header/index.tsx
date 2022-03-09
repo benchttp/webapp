@@ -3,6 +3,7 @@ import { FC } from 'react'
 import { Text, Avatar } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
 import {
+  ButtonAppearence,
   COLORS,
   Colors,
   FontFamilies,
@@ -12,7 +13,7 @@ import {
 import { StyledHeader } from './core/header.styles'
 import { IProps } from './core/header.types'
 import { Zap } from 'react-feather'
-import { StyledPrimaryButton } from 'components/PrimaryButton/core/primaryButton.styles'
+import { StyledButton } from 'components/Button/core/Button.styles'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
@@ -35,9 +36,16 @@ export const Header: FC<IProps> = (props) => {
         </Text>
       </div>
       <div className="f">
-        <StyledPrimaryButton className="mr-4">
+        <StyledButton
+          className="mr-4"
+          appearance={ButtonAppearence.OUTLINE}
+          mainColor={Colors.PRIMARY}
+          secondaryColor={Colors.WHITE}
+          active={true}
+          hover={true}
+        >
           Generate config
-        </StyledPrimaryButton>
+        </StyledButton>
         <Avatar username="John Doe" />
       </div>
     </StyledHeader>

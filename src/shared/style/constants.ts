@@ -26,6 +26,7 @@ export enum Colors {
   PUT = 'PUT',
   PATCH = 'PATCH',
   DELETE = 'DELETE',
+  TRANSPARENT = 'TRANSPARENT',
 }
 
 export const COLORS = {
@@ -42,6 +43,7 @@ export const COLORS = {
   [Colors.PUT]: '#097BED',
   [Colors.PATCH]: '#212121',
   [Colors.DELETE]: '#EB2013',
+  [Colors.TRANSPARENT]: 'transparent',
 }
 
 export enum FontSizes {
@@ -86,4 +88,9 @@ export enum ZIndexes {
 
 export const Z_INDEXES = {
   [ZIndexes.HEADER]: 1,
+}
+
+export enum ButtonAppearence {
+  PRIMARY = 'primary',
+  OUTLINE = 'outline',
 }
