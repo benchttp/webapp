@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { IProps } from './core/line.types'
 import { StyledLineChart } from './core/line.styles'
-import { ResponsiveLine } from '@nivo/line'
+import { ResponsiveLine, SliceTooltipProps } from '@nivo/line'
 import { Text } from 'components/Text'
 import {
   Colors,
@@ -13,6 +13,35 @@ import {
 
 export const LineChart: FC<IProps> = (props) => {
   const { data, legendX, legendY } = props
+
+  const Tooltip = ({ event }: { event: SliceTooltipProps }) => (
+    <div className="tooltip">
+      <Text
+        font={FontFamilies.INTER}
+        size={FontSizes.SMALL}
+        weight={FontWeights.MEDIUM}
+      >
+        Request n°{event.slice.points[0].data.x}
+      </Text>
+      <div className="flex">
+        <Text
+          font={FontFamilies.INTER}
+          size={FontSizes.SMALL}
+          weight={FontWeights.MEDIUM}
+        >
+          Request time:{' '}
+        </Text>
+        <Text
+          color={Colors.PRIMARY}
+          font={FontFamilies.INTER}
+          size={FontSizes.SMALL}
+          weight={FontWeights.MEDIUM}
+        >
+          {event.slice.points[0].data.y} ms
+        </Text>
+      </div>
+    </div>
+  )
 
   return (
     <StyledLineChart {...props}>
@@ -36,34 +65,7 @@ export const LineChart: FC<IProps> = (props) => {
         enableSlices="x"
         lineWidth={3}
         colors={COLORS.primary}
-        sliceTooltip={(e) => (
-          <div className="tooltip">
-            <Text
-              font={FontFamilies.INTER}
-              size={FontSizes.SMALL}
-              weight={FontWeights.MEDIUM}
-            >
-              Request n°{e.slice.points[0].data.x}
-            </Text>
-            <div className="flex">
-              <Text
-                font={FontFamilies.INTER}
-                size={FontSizes.SMALL}
-                weight={FontWeights.MEDIUM}
-              >
-                Request time:{' '}
-              </Text>
-              <Text
-                color={Colors.PRIMARY}
-                font={FontFamilies.INTER}
-                size={FontSizes.SMALL}
-                weight={FontWeights.MEDIUM}
-              >
-                {e.slice.points[0].data.y} ms
-              </Text>
-            </div>
-          </div>
-        )}
+        sliceTooltip={(e) => <Tooltip event={e} />}
         useMesh={true}
         axisBottom={{
           tickSize: 5,
