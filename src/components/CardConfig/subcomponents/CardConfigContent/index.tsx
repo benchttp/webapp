@@ -8,7 +8,12 @@ import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
 export const CardConfigContent: FC<IProps> = (props) => {
   const { className } = props
 
-  const headerContent = Object.entries({ key0: 'val0', key1: 'val1' })
+  const headerContent = Object.entries({
+    key0: 'val0',
+    key1: 'val1',
+    key2: 'val2',
+    key3: 'val3',
+  })
 
   const headersList = headerContent.map(([key, value], index) => {
     return (
@@ -64,6 +69,12 @@ export const CardConfigContent: FC<IProps> = (props) => {
           Headers
         </Text>
         <table className="f pl-6 pr-6 f-jc-space-a headersListContainer">
+          <thead>
+            <tr className="f keyValueCouple">
+              <th className="keyColumn">Key</th>
+              <th className="valueColumn">Value</th>
+            </tr>
+          </thead>
           <tbody>{headersList}</tbody>
         </table>
       </div>

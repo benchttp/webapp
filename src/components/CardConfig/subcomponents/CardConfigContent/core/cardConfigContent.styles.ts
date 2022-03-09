@@ -13,17 +13,20 @@ export const StyledCardConfigContent = styled('div')`
   .headersListContainer {
     flex-wrap: wrap;
     flex-direction: column;
-    border-collapse: collapse;
   }
 
   tr {
     border-top: 1px solid #6a6a6a;
-    border-left: none;
-    border-right: none;
+    border-left: 1px solid #6a6a6a;
+    border-right: 1px solid #6a6a6a;
   }
 
   tr:last-child {
     border-bottom: 1px solid #6a6a6a;
+  }
+
+  tr:first-child {
+    border-bottom: none;
   }
 
   keyValueCouple {
