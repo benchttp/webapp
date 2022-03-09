@@ -4,7 +4,7 @@ import { ButtonAppearence } from 'shared/style/constants'
 import { StyledButton } from './core/Button.styles'
 import { IProps } from './core/Button.types'
 
-export const PrimaryButton: FC<IProps> = ({
+export const Button: FC<IProps> = ({
   children,
   className = '',
   appearence = ButtonAppearence.PRIMARY,

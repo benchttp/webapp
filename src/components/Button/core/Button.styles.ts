@@ -20,6 +20,8 @@ export const StyledButton = styled('button')<IProps>`
     cursor: pointer;
     border-radius: ${BORDER_RADIUS[1]};
     transition: color 150ms, background-color 150ms, transform 100ms;
+    font-family: 'poppins';
+    font-weight: 700;
 
     ${
       // Primary appearence
