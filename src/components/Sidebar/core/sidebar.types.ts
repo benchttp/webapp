@@ -8,6 +8,4 @@ interface ITest {
   name: string
 }
 
-export interface IForm {
-  search: string
-}
+export type IHook = (params: { search: string }) => void
