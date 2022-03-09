@@ -68,7 +68,7 @@ export const CardConfigContent: FC<IProps> = (props) => {
         >
           Headers
         </Text>
-        <table className="f pl-6 pr-6 f-jc-space-a headersListContainer">
+        <table className="f f-jc-space-a headersListContainer">
           <thead>
             <tr className="f keyValueCouple">
               <th className="keyColumn">Key</th>
