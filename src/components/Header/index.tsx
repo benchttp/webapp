@@ -38,7 +38,7 @@ export const Header: FC<IProps> = (props) => {
       <div className="f">
         <StyledButton
           className="mr-4"
-          appearance={ButtonAppearence.OUTLINE}
+          appearance={ButtonAppearence.PRIMARY}
           mainColor={Colors.PRIMARY}
           secondaryColor={Colors.WHITE}
           active={true}

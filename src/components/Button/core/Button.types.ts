@@ -9,6 +9,7 @@ interface IGenericProps extends IStandardProps {
   secondaryColor?: Colors
   hover?: boolean
   active?: boolean
+  onClick?: () => void
 }
 
 interface IPrimaryButtonProps extends IGenericProps {

@@ -8,8 +8,9 @@ export const PrimaryButton: FC<IProps> = ({
   children,
   className = '',
   appearence = ButtonAppearence.PRIMARY,
+  onClick,
 }) => (
-  <StyledButton className={className} appearance={appearence}>
+  <StyledButton className={className} appearance={appearence} onClick={onClick}>
     {children}
   </StyledButton>
 )
