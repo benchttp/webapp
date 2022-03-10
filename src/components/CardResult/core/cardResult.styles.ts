@@ -6,8 +6,9 @@ import {
   SPACINGS,
 } from 'shared/style/constants'
 import styled from 'styled-components'
+import { IPropsStyle } from './cardResult.types'
 
-export const StyledCardResult = styled('div')`
+export const StyledCardResult = styled('div')<IPropsStyle>`
   .card {
     display: flex;
     justify-content: row;
@@ -20,6 +21,16 @@ export const StyledCardResult = styled('div')`
     flex-direction column;
     justify-content: space-between;
     margin-left: ${SPACINGS[2]};
+  }
+
+  .round-icon {
+    background: ${({ colorIcon }) => colorIcon && `${colorIcon}50`};
+    height: 64px;
+    width: 64px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .overlay {
