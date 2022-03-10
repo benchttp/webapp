@@ -1,3 +1,12 @@
+import {
+  ChevronLeft,
+  Clock,
+  Download,
+  Search,
+  Settings,
+  Zap,
+} from 'react-feather'
+
 export const SPACINGS = [
   '0',
   '8px',
@@ -47,12 +56,14 @@ export const COLORS = {
 export enum FontSizes {
   BASE = 'base',
   SMALL = 'small',
+  MEDIUM = 'medium',
   LARGE = 'large',
 }
 
 export const FONT_SIZES = {
   [FontSizes.BASE]: '16px',
   [FontSizes.SMALL]: '12.8px',
+  [FontSizes.MEDIUM]: '25px',
   [FontSizes.LARGE]: '31.25px',
 }
 
@@ -86,4 +97,22 @@ export enum ZIndexs {
 
 export const Z_INDEXS = {
   [ZIndexs.HEADER]: 1,
+}
+
+export enum Icons {
+  ZAP = 'zap',
+  SEARCH = 'search',
+  DOWNLOAD = 'download',
+  SETTINGS = 'settings',
+  CLOCK = 'clock',
+  CHEVRON_LEFT = 'chevronLeft',
+}
+
+export const ICONS = {
+  [Icons.ZAP]: Zap,
+  [Icons.SEARCH]: Search,
+  [Icons.DOWNLOAD]: Download,
+  [Icons.SETTINGS]: Settings,
+  [Icons.CLOCK]: Clock,
+  [Icons.CHEVRON_LEFT]: ChevronLeft,
 }

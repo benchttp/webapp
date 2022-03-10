@@ -14,12 +14,12 @@ interface IGenericProps extends IStandardProps {
 
 interface IPoppinsProps extends IGenericProps {
   font: FontFamilies.POPPINS
-  size?: FontSizes.LARGE | FontSizes.BASE
+  size?: FontSizes.LARGE | FontSizes.BASE | FontSizes.MEDIUM
   weight?: FontWeights.BOLD
 }
 
 interface IInterProps extends IGenericProps {
   font?: FontFamilies.INTER
-  size?: FontSizes.SMALL | FontSizes.BASE
+  size?: FontSizes.SMALL | FontSizes.BASE | FontSizes.MEDIUM
   weight?: FontWeights.MEDIUM | FontWeights.SEMI
 }

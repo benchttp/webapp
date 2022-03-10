@@ -80,6 +80,10 @@ ${BORDER_RADIUS.map(
     flex-direction: column;
 }
 
+.f-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
 .f-jc-start {
     justify-content: flex-start;
 }
@@ -118,7 +122,7 @@ ${BORDER_RADIUS.map(
 }
 
 .f-js-center {
-    ustify-self: center;
+    justify-self: center;
 }
 
 .f-js-end {
