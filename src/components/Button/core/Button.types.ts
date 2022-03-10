@@ -1,11 +1,11 @@
 import { MouseEventHandler } from 'react'
-import { ButtonAppearence, Colors } from 'shared/style/constants'
+import { ButtonAppearance, Colors } from 'shared/style/constants'
 import { IStandardProps } from '../../../shared/helpers/types'
 
 export type IProps = IPrimaryButtonProps | IOutlineButtonProps
 
 interface IGenericProps extends IStandardProps {
-  appearence?: ButtonAppearence
+  appearence?: ButtonAppearance
   mainColor: Colors
   secondaryColor: Colors
   hover: boolean
@@ -14,9 +14,9 @@ interface IGenericProps extends IStandardProps {
 }
 
 interface IPrimaryButtonProps extends IGenericProps {
-  appearance: ButtonAppearence.PRIMARY
+  appearance: ButtonAppearance.PRIMARY
 }
 
 interface IOutlineButtonProps extends IGenericProps {
-  appearance: ButtonAppearence.OUTLINE
+  appearance: ButtonAppearance.OUTLINE
 }

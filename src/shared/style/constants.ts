@@ -103,7 +103,7 @@ export const Z_INDEXES = {
   [ZIndexes.HEADER]: 1,
 }
 
-export enum ButtonAppearence {
+export enum ButtonAppearance {
   PRIMARY = 'primary',
   OUTLINE = 'outline',
 }

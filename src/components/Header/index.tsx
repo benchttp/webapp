@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { Text, Avatar, Button } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
 import {
-  ButtonAppearence,
+  ButtonAppearance,
   COLORS,
   Colors,
   FontFamilies,
@@ -40,7 +40,7 @@ export const Header: FC<IProps> = (props) => {
       <div className="f">
         <Button
           className="mr-4"
-          appearance={ButtonAppearence.PRIMARY}
+          appearance={ButtonAppearance.PRIMARY}
           mainColor={Colors.PRIMARY}
           secondaryColor={Colors.WHITE}
           active={true}

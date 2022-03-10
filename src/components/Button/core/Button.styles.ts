@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import {
   BORDER_RADIUS,
-  ButtonAppearence,
+  ButtonAppearance,
   COLORS,
   SPACINGS,
 } from 'shared/style/constants'
@@ -17,7 +17,7 @@ export const StyledButton = styled('button')<IProps>`
     font-weight: 700;
 
     ${
-      appearance === ButtonAppearence.PRIMARY
+      appearance === ButtonAppearance.PRIMARY
         ? `background-color: ${COLORS[mainColor]};
         border: 1px solid ${COLORS[mainColor]};
         color: ${COLORS[secondaryColor]};
