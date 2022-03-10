@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 import { Card, ExpansionPanel } from 'components'
 
-import { CardConfigContent } from './subcomponents/CardConfigContent'
-import { CardConfigHeader } from './subcomponents/CardConfigHeader'
+import { CardConfigContent } from './components/CardConfigContent'
+import { CardConfigHeader } from './components/CardConfigHeader'
 
 export const CardConfig: FC = () => {
   return (

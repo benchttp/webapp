@@ -1,4 +1,4 @@
-import { DEFAULT_HEADER_VALUES } from 'components/Inputs/HeaderInput/core/headerInput.constants'
+import { DEFAULT_HEADER_VALUES } from 'pages/Setup/components/HeaderInput/core/headerInput.constants'
 import { HttpMethods } from 'shared/helpers/constants'
 import { v4 as uuid } from 'uuid'
 

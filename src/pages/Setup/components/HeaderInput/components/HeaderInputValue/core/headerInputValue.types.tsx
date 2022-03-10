@@ -1,4 +1,4 @@
-import { IHeaderValue } from 'components/Inputs/HeaderInput/core/headerInput.types'
+import { IHeaderValue } from 'pages/Setup/components/HeaderInput/core/headerInput.types'
 import { Dispatch, SetStateAction } from 'react'
 import { IStandardProps } from 'shared/helpers/types'
 

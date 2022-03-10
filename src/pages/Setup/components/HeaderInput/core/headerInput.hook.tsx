@@ -14,6 +14,11 @@ export const useHeaderInput: IHook = ({
       return
     }
 
+    if (values.length === 0) {
+      setHeaders(headers.filter((_, headerIndex) => headerIndex !== index))
+      return
+    }
+
     const newHeaders = [...headers]
     const header = newHeaders[index]
     newHeaders[index] = { ...header, key, values }
