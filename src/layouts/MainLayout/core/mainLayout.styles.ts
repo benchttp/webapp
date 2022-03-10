@@ -22,7 +22,7 @@ export const StyledMainLayout = styled('div')`
   }
 
   .content {
-    flex: 1 0 0;
+    flex: 1 1 auto;
     overflow-y: scroll;
   }
 `

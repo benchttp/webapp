@@ -71,13 +71,17 @@ export const CardConfigHeader: FC<IProps> = (props) => {
             <Text weight={FontWeights.MEDIUM}>Workers</Text>
           </div>
         </div>
-        {!isOpen && (
-          <div onClick={toggle}>
+        <div onClick={toggle} className="cursor-p">
+          {!isOpen ? (
             <Text font={FontFamilies.POPPINS} weight={FontWeights.BOLD}>
               See more config details
             </Text>
-          </div>
-        )}
+          ) : (
+            <Text font={FontFamilies.POPPINS} weight={FontWeights.BOLD}>
+              Hide config details
+            </Text>
+          )}
+        </div>
       </div>
     </div>
   )

@@ -100,6 +100,10 @@ ${BORDER_RADIUS.map(
     justify-content: space-between;
 }
 
+.f-jc-space-a {
+    justify-content: space-around;
+}
+
 .f-ai-start {
     align-items: flex-start;
 }
@@ -143,6 +147,10 @@ ${BORDER_RADIUS.map(
 
 .f-wrap {
     flex-wrap: wrap;
+}
+
+.cursor-p {
+    cursor: pointer;
 }
 
 html, body, div, span, applet, object, iframe,
