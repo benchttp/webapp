@@ -7,6 +7,7 @@ import { IProps } from './core/cardResult.types'
 
 export const CardResult: FC<IProps> = ({
   icon,
+  colorIcon,
   number,
   unit,
   text,
@@ -16,9 +17,9 @@ export const CardResult: FC<IProps> = ({
   const [optionsDropdownVisible, setOptionsDropdownVisible] = useState(false)
   return (
     <Card>
-      <StyledCardResult>
+      <StyledCardResult colorIcon={colorIcon}>
         <div className="card">
-          {icon}
+          <div className="round-icon">{icon}</div>
           <div className="result-text">
             <Text
               weight={FontWeights.BOLD}

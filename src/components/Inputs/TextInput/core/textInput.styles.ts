@@ -8,21 +8,13 @@ import {
   SPACINGS,
 } from 'shared/style/constants'
 
-import { IProps } from './textInput.interfaces'
+import { IProps } from './textInput.types'
 
-export const StyledTextInput = styled['div']<IProps>`
-  label,
-  input {
-    font-size: ${FONT_SIZES['base']};
-    font-family: ${FONT_FAMILIES['inter']};
-    font-weight: ${FONT_WEIGHTS['semi']};
-    color: ${COLORS['white']};
-  }
-
+export const StyledTextInput = styled('div')<IProps>`
   .input {
     position: relative;
-    ${({ iconPosition, hasIcon }) =>
-      hasIcon &&
+    ${({ iconPosition, icon }) =>
+      icon &&
       (iconPosition && iconPosition === 'right'
         ? `padding-right: ${SPACINGS[5]};`
         : `padding-left: ${SPACINGS[5]};`)}
@@ -38,12 +30,16 @@ export const StyledTextInput = styled['div']<IProps>`
     }
 
     input {
+      font-size: ${FONT_SIZES['base']};
+      font-family: ${FONT_FAMILIES['inter']};
+      color: ${COLORS['white']};
+      font-weight: ${FONT_WEIGHTS['semi']};
       position: relative;
       background: none;
       border: none;
       flex: 1 0 auto;
-      width: 100%;
       outline: none;
+      padding: 0;
 
       &:placeholder {
         background: ${COLORS['grey2']};
@@ -51,7 +47,7 @@ export const StyledTextInput = styled['div']<IProps>`
     }
 
     .icon {
-      ${({ hasIcon }) => !hasIcon && 'display: none;'}
+      ${({ icon }) => !icon && 'display: none;'}
       position: absolute;
       ${({ iconPosition }) =>
         iconPosition && iconPosition === 'right' ? 'right: 0;' : 'left: 0;'}

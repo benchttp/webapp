@@ -1,10 +1,9 @@
 import { createElement, FC } from 'react'
-import { useController } from 'react-hook-form'
 
-import { Colors } from 'shared/style/constants'
+import { COLORS, Colors, ICONS } from 'shared/style/constants'
 
 import { handleChange } from './core/textInput.helpers'
-import { IProps } from './core/textInput.interfaces'
+import { IProps } from './core/textInput.types'
 import { StyledTextInput } from './core/textInput.styles'
 
 export const TextInput: FC<IProps> = (props) => {
@@ -13,13 +12,11 @@ export const TextInput: FC<IProps> = (props) => {
     name,
     placeholder,
     icon,
-    iconColor = Colors.GREY2,
-    submitOnChange,
-    onChange,
     className,
+    setValue,
+    value,
+    iconColor = Colors.GREY2,
   } = props
-
-  const { field } = useController(props)
 
   return (
     <StyledTextInput
@@ -33,16 +30,16 @@ export const TextInput: FC<IProps> = (props) => {
       )}
       <div className="input f f-ai-center">
         <input
-          {...field}
-          onChange={handleChange(submitOnChange, onChange, field.onChange)}
+          onChange={handleChange(setValue)}
           placeholder={placeholder}
           name={name}
           id={name}
           type="text"
+          value={value}
         />
         {icon &&
-          createElement(icon, {
-            color: iconColor,
+          createElement(ICONS[icon], {
+            color: COLORS[iconColor],
             className: 'icon',
           })}
       </div>

@@ -1,15 +1,4 @@
 import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
-import { UseFormHandleSubmit } from 'react-hook-form'
-
-import { IForm } from './sidebar.types'
-
-export const onChange = (
-  handleSubmit: UseFormHandleSubmit<IForm>,
-  callback: (s: string) => void
-) =>
-  handleSubmit((data) => {
-    callback(data.search)
-  })
 
 export const handleCardClick = (
   setActiveCardIndex: Dispatch<SetStateAction<number>>,
@@ -20,4 +9,8 @@ export const handleCardClick = (
   }
 
   return handler
+}
+
+export const handleSearchInputChange = (search: string) => {
+  console.log(`Make API call with search terms : ${search}`)
 }

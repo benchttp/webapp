@@ -1,8 +1,9 @@
 import { FC } from 'react'
 
-import { Text, Avatar } from 'components'
+import { Text, Avatar, Button } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
 import {
+  ButtonAppearence,
   COLORS,
   Colors,
   FontFamilies,
@@ -12,10 +13,12 @@ import {
 import { StyledHeader } from './core/header.styles'
 import { IProps } from './core/header.types'
 import { Zap } from 'react-feather'
-import { StyledPrimaryButton } from 'components/PrimaryButton/core/primaryButton.styles'
+import { useNavigate } from 'react-router-dom'
+import { handleGenerateConfigClick } from './core/header.helpers'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
+  const navigate = useNavigate()
 
   return (
     <StyledHeader
@@ -35,9 +38,17 @@ export const Header: FC<IProps> = (props) => {
         </Text>
       </div>
       <div className="f">
-        <StyledPrimaryButton className="mr-4">
-          Generate config
-        </StyledPrimaryButton>
+        <Button
+          className="mr-4"
+          appearance={ButtonAppearence.PRIMARY}
+          mainColor={Colors.PRIMARY}
+          secondaryColor={Colors.WHITE}
+          active={true}
+          hover={true}
+          onClick={handleGenerateConfigClick(navigate)}
+        >
+          Generate configuration
+        </Button>
         <Avatar username="John Doe" />
       </div>
     </StyledHeader>

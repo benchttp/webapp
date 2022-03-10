@@ -1,23 +1,12 @@
 import { ChangeEventHandler } from 'react'
-import { ControllerRenderProps } from 'react-hook-form'
 
-import { IProps } from './textInput.interfaces'
+import { IProps } from './textInput.types'
 
 export const handleChange = (
-  submitOnChange: IProps['submitOnChange'],
-  onChange: IProps['onChange'],
-  reactHooksOnChange: ControllerRenderProps['onChange']
-) => {
-  const handler: ChangeEventHandler = (e) => {
-    if (!onChange) {
-      return
-    }
-
-    if (submitOnChange) {
-      onChange(e)
-    }
-
-    reactHooksOnChange(e)
+  setValue: IProps['setValue']
+): ChangeEventHandler<HTMLInputElement> => {
+  const handler: ChangeEventHandler<HTMLInputElement> = (e) => {
+    setValue(e.target.value)
   }
 
   return handler

@@ -1,12 +1,14 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { CardResult } from 'components'
 import { Clock } from 'react-feather'
+import { COLORS } from 'shared/style/constants'
 
 export default {
   title: 'Atoms/CardResult',
   component: CardResult,
   args: {
-    icon: Clock,
+    icon: <Clock width={40} height={40} color={COLORS.primary} />,
+    colorIcon: COLORS.primary,
     unit: 'ms',
     number: 500,
     text: <div>of request were successfull</div>,
