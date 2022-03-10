@@ -37,33 +37,6 @@ export const CardRequestHeader: FC<IProps> = (props) => {
         </button>
         <ChevronDown className="ml-2" size={16} />
       </div>
-      {/* <div className={'wrapper'}>
-        <Row>
-          <Col>
-            <p className="counter">#{index}</p>
-          </Col>
-          <Col>
-            <Row>
-              <p className="roundedColorResponse" />
-              <p className="responseCode">{responseCode}</p>
-            </Row>
-          </Col>
-          <Col>
-            <p className="responseDuration">{responseTime} ms</p>
-          </Col>
-          <Col>
-            <p className="responseDuration">{responseSize} B</p>
-          </Col>
-          <div className="rawResponseDiv">
-            <Col>
-              <button type="button" className={'rawResponseButton'}>
-                See raw response
-              </button>
-              <ChevronDown size={16} onClick={toggle} />
-            </Col>
-          </div>
-        </Row>
-      </div> */}
     </StyledCardRequestHeader>
   )
 }
