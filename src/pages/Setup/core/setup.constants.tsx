@@ -4,6 +4,7 @@ import { v4 as uuid } from 'uuid'
 
 export const METHOD_OPTIONS: string[] = [
   HttpMethods.GET,
+  HttpMethods.POST,
   HttpMethods.PUT,
   HttpMethods.PATCH,
   HttpMethods.DELETE,
