@@ -27,11 +27,11 @@ export const HeaderInputValue: FC<IProps> = (props) => {
       />
       <PlusCircle
         onClick={handleAddHeaderValueClick(values, setValues, index)}
-        className="mr-3 mb-2"
+        className="mr-3 mb-2 cursor-p"
       />
       <Trash2
         onClick={handleDeleteHeaderValueClick(values, setValues, index)}
-        className="mb-2"
+        className="mb-2 cursor-p"
       />
     </StyledHeaderInputValue>
   )

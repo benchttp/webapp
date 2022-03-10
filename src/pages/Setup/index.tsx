@@ -85,7 +85,7 @@ export const Setup: FC = () => {
           <ChevronLeft
             onClick={handleBackClick(navigate)}
             size={32}
-            className="mr-2"
+            className="mr-2 cursor-p"
           />
           <Text
             font={FontFamilies.POPPINS}
