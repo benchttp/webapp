@@ -1,3 +1,4 @@
+import { MouseEventHandler } from 'react'
 import { ButtonAppearence, Colors } from 'shared/style/constants'
 import { IStandardProps } from '../../../shared/helpers/types'
 
@@ -9,7 +10,7 @@ interface IGenericProps extends IStandardProps {
   secondaryColor: Colors
   hover: boolean
   active: boolean
-  onClick?: () => void
+  onClick?: MouseEventHandler
 }
 
 interface IPrimaryButtonProps extends IGenericProps {

@@ -1,5 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
-import { useForm } from 'react-hook-form'
 
 import { LineChart } from 'components'
 
