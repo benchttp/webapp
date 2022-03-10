@@ -1,8 +1,9 @@
 import { FC } from 'react'
 
-import { Text, Avatar } from 'components'
+import { Text, Avatar, Button } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
 import {
+  ButtonAppearence,
   COLORS,
   Colors,
   FontFamilies,
@@ -33,7 +34,19 @@ export const Header: FC<IProps> = (props) => {
           {BENCHTTP}
         </Text>
       </div>
-      <Avatar username="John Doe" />
+      <div className="f">
+        <Button
+          className="mr-4"
+          appearance={ButtonAppearence.PRIMARY}
+          mainColor={Colors.PRIMARY}
+          secondaryColor={Colors.WHITE}
+          active={true}
+          hover={true}
+        >
+          Generate config
+        </Button>
+        <Avatar username="John Doe" />
+      </div>
     </StyledHeader>
   )
 }
