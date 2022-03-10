@@ -2,25 +2,17 @@ import React, { useState } from 'react'
 
 import { useAppSelector, useAppDispatch } from '../../shared/hooks/store'
 import styles from './Counter.module.css'
-import {
-  decrement,
-  increment,
-  incrementByAmount,
-  incrementAsync,
-  incrementIfOdd,
-  selectCount,
-} from './counterSlice'
 
 export function Counter() {
-  const count = useAppSelector(selectCount)
-  const dispatch = useAppDispatch()
+  // const count = useAppSelector(selectCount)
+  // const dispatch = useAppDispatch()
   const [incrementAmount, setIncrementAmount] = useState('2')
 
   const incrementValue = Number(incrementAmount) || 0
 
   return (
     <div>
-      <div className={styles.row}>
+      {/* <div className={styles.row}>
         <button
           className={styles.button}
           aria-label="Decrement value"
@@ -62,7 +54,7 @@ export function Counter() {
         >
           Add If Odd
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }
