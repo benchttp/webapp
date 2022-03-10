@@ -13,9 +13,12 @@ import {
 import { StyledHeader } from './core/header.styles'
 import { IProps } from './core/header.types'
 import { Zap } from 'react-feather'
+import { useNavigate } from 'react-router-dom'
+import { handleGenerateConfigClick } from './core/header.helpers'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props
+  const navigate = useNavigate()
 
   return (
     <StyledHeader
@@ -42,8 +45,9 @@ export const Header: FC<IProps> = (props) => {
           secondaryColor={Colors.WHITE}
           active={true}
           hover={true}
+          onClick={handleGenerateConfigClick(navigate)}
         >
-          Generate config
+          Generate configuration
         </Button>
         <Avatar username="John Doe" />
       </div>
