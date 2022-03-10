@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { ButtonAppearence, Colors } from 'shared/style/constants'
+import { ButtonAppearance, Colors } from 'shared/style/constants'
 
 import { StyledButton } from './core/Button.styles'
 import { IProps } from './core/Button.types'
@@ -7,7 +7,7 @@ import { IProps } from './core/Button.types'
 export const Button: FC<IProps> = ({
   children,
   className = '',
-  appearence = ButtonAppearence.PRIMARY,
+  appearance = ButtonAppearance.PRIMARY,
   onClick,
   mainColor = Colors.PRIMARY,
   secondaryColor = Colors.WHITE,
@@ -16,7 +16,7 @@ export const Button: FC<IProps> = ({
 }) => (
   <StyledButton
     className={className}
-    appearance={appearence}
+    appearance={appearance}
     onClick={onClick}
     mainColor={mainColor}
     secondaryColor={secondaryColor}

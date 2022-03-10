@@ -6,12 +6,19 @@ import {
   QueryParamInput,
   HeaderInput,
   NumberInput,
+  Button,
 } from 'components'
 import { MainLayout } from 'layouts/MainLayout'
 import { FC, useState } from 'react'
 import { ChevronLeft, Copy, Download } from 'react-feather'
 import { useNavigate } from 'react-router-dom'
-import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
+import {
+  ButtonAppearance,
+  Colors,
+  FontFamilies,
+  FontSizes,
+  FontWeights,
+} from 'shared/style/constants'
 import {
   handleAddHeaderClick,
   handleAddQueryParamClick,
@@ -78,7 +85,7 @@ export const Setup: FC = () => {
           <ChevronLeft
             onClick={handleBackClick(navigate)}
             size={32}
-            className="mr-2"
+            className="mr-2 cursor-p"
           />
           <Text
             font={FontFamilies.POPPINS}
@@ -135,7 +142,12 @@ export const Setup: FC = () => {
                     setQueryParams={setQueryParams}
                   />
                 ))}
-                <button
+                <Button
+                  appearance={ButtonAppearance.OUTLINE}
+                  mainColor={Colors.PRIMARY}
+                  secondaryColor={Colors.WHITE}
+                  active={true}
+                  hover={true}
                   onClick={handleAddQueryParamClick(
                     queryParams,
                     setQueryParams,
@@ -143,7 +155,7 @@ export const Setup: FC = () => {
                   )}
                 >
                   Add query param
-                </button>
+                </Button>
               </div>
               <div className="mb-5">
                 <Text
@@ -162,11 +174,16 @@ export const Setup: FC = () => {
                     setHeaders={setHeaders}
                   />
                 ))}
-                <button
+                <Button
+                  appearance={ButtonAppearance.OUTLINE}
+                  mainColor={Colors.PRIMARY}
+                  secondaryColor={Colors.WHITE}
+                  active={true}
+                  hover={true}
                   onClick={handleAddHeaderClick(headers, setHeaders, uuid)}
                 >
                   Add header
-                </button>
+                </Button>
               </div>
               <div>
                 <Text
@@ -298,9 +315,12 @@ export const Setup: FC = () => {
               <div className="icons">
                 <Download
                   onClick={handleDownloadYamlClick(config)}
-                  className="mr-1"
+                  className="mr-1 cursor-p"
                 />
-                <Copy onClick={handleCopyCommandClick(config)} />
+                <Copy
+                  onClick={handleCopyCommandClick(config)}
+                  className="cursor-p"
+                />
               </div>
             </pre>
           </Card>

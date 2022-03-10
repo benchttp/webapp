@@ -35,7 +35,7 @@ export const QueryParamInput: FC<IProps> = (props) => {
         setValue={setValue}
       />
       <Trash2
-        className="mb-2"
+        className="mb-2 cursor-p"
         onClick={handleDeleteClick(queryParams, setQueryParams, index)}
       />
     </StyledQueryParamInput>
