@@ -63,6 +63,9 @@ export const StyledCardRequest = styled['div']`
 `
 
 export const StyledCardRequestContent = styled['div']`
+  height: 200px;
+  margin-top: ${SPACINGS[5]};
+
   .tooltip {
     background: #fff;
     padding: 10px 20px;

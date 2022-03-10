@@ -38,29 +38,14 @@ export const CardRequest: FC<IProps> = (props) => {
     },
   ]
 
-  const convertInMs = (time: number) => {
-    return parseInt((time / 1000).toFixed(0))
-  }
-
-  const computeData = () => {
-    const barChartData: Record<string, number> = {}
-    for (let i = 0; i <= data.length; i++) {
-      barChartData[data[i].name] =
-        i === 0
-          ? convertInMs(data[i].time)
-          : convertInMs(data[i].time - data[i - 1].time)
-    }
-    return barChartData
-  }
-
   return (
-    <Card>
+    <Card className="mt-4">
       <ExpansionPanel>
         <ExpansionPanel.Header>
           <CardRequestHeader {...props} />
         </ExpansionPanel.Header>
         <ExpansionPanel.Content>
-          <CardRequestContent data={computeData()} />
+          <CardRequestContent data={data} />
         </ExpansionPanel.Content>
       </ExpansionPanel>
     </Card>

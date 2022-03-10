@@ -12,7 +12,12 @@ export const Index: FC = () => {
         Config
       </Text>
       <CardConfig />
-      <CardRequest />
+      <CardRequest
+        index={0}
+        responseCode={200}
+        responseSize={123}
+        responseTime={10}
+      />
     </MainLayout>
   )
 }

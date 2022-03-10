@@ -1,5 +1,5 @@
 import { IStandardProps } from 'shared/helpers/types'
 
 export interface IProps extends IStandardProps {
-  data: Record<string, number>
+  data: { name: string; time: number }[]
 }

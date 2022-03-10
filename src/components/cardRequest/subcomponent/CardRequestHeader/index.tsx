@@ -1,8 +1,14 @@
+import { Button } from 'components/Button'
 import { ExpansionPanelContext } from 'components/ExpansionPanel'
 import { Text } from 'components/Text'
 import { FC, useContext } from 'react'
 import { ChevronDown } from 'react-feather'
-import { FontFamilies, FontWeights } from 'shared/style/constants'
+import {
+  ButtonAppearance,
+  Colors,
+  FontFamilies,
+  FontWeights,
+} from 'shared/style/constants'
 import { StyledCardRequestHeader } from './core/cardRequestHeader.styles'
 import { IProps } from './core/cardRequestHeader.types'
 
@@ -32,9 +38,15 @@ export const CardRequestHeader: FC<IProps> = (props) => {
         <Text>{responseSize} B</Text>
       </div>
       <div className="f f-ai-center">
-        <button type="button" className={'rawResponseButton'}>
-          See raw response
-        </button>
+        <Button
+          appearance={ButtonAppearance.OUTLINE}
+          mainColor={Colors.PRIMARY}
+          secondaryColor={Colors.BLACK}
+          hover={true}
+          active={true}
+        >
+          Raw response
+        </Button>
         <ChevronDown className="ml-2" size={16} />
       </div>
     </StyledCardRequestHeader>
