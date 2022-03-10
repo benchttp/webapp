@@ -182,7 +182,7 @@ export const Setup: FC = () => {
                   hover={true}
                   onClick={handleAddHeaderClick(headers, setHeaders, uuid)}
                 >
-                  Add query param
+                  Add header
                 </Button>
               </div>
               <div>
