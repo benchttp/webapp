@@ -1,0 +1,37 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react'
+
+import { TextInput } from 'components'
+import { hideControl } from 'shared/helpers/storybook'
+import { Colors, Icons } from 'shared/style/constants'
+import { useState } from 'react'
+
+export default {
+  title: 'Atoms/TextInput',
+  component: TextInput,
+  args: {
+    placeholder: 'Greg',
+    name: 'textInput',
+  },
+  argTypes: {
+    id: hideControl,
+    className: hideControl,
+    name: hideControl,
+  },
+} as ComponentMeta<typeof TextInput>
+
+const Template: ComponentStory<typeof TextInput> = (args) => {
+  const [test, setTest] = useState('')
+
+  return <TextInput {...args} value={test} setValue={setTest} />
+}
+
+export const Main = Template.bind({})
+
+export const SearchInput = Template.bind({})
+SearchInput.args = {
+  placeholder: 'Search ...',
+  name: 'search',
+  icon: Icons.SEARCH,
+  iconPosition: 'left',
+  iconColor: Colors.WHITE,
+}
