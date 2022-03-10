@@ -9,7 +9,7 @@
 
 This repository holds the code for the WebApp provided by Benchttp. The WebApp provide data vizualisation for each benchmark.
 
-## How to use it
+## How to connect
 
 The authentication is done with your GitHub account.
 
