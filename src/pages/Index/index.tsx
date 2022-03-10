@@ -7,7 +7,6 @@ import { MainLayout } from 'layouts/MainLayout'
 export const Index: FC = () => {
   return (
     <MainLayout>
-      <Dropdown className="mb-4" />
       <Text className="mb-4" font={FontFamilies.POPPINS} size={FontSizes.LARGE}>
         Config
       </Text>
