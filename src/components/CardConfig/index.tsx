@@ -13,11 +13,7 @@ export const CardConfig: FC = () => {
           <CardConfigHeader />
         </ExpansionPanel.Header>
         <ExpansionPanel.Content>
-          <CardConfigContent
-            className="mt-3"
-            concurrency={1}
-            interval={'50ms'}
-          />
+          <CardConfigContent className="mt-3" concurrency={1} interval="50ms" />
         </ExpansionPanel.Content>
       </ExpansionPanel>
     </Card>
