@@ -61,3 +61,12 @@ export const StyledCardRequest = styled['div']`
     padding-top: 5px;
   }
 `
+
+export const StyledCardRequestContent = styled['div']`
+  .tooltip {
+    background: #fff;
+    padding: 10px 20px;
+    color: #000;
+    border-radius: 10px;
+  }
+`
