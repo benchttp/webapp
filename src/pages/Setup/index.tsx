@@ -315,9 +315,12 @@ export const Setup: FC = () => {
               <div className="icons">
                 <Download
                   onClick={handleDownloadYamlClick(config)}
-                  className="mr-1"
+                  className="mr-1 cursor-p"
                 />
-                <Copy onClick={handleCopyCommandClick(config)} />
+                <Copy
+                  onClick={handleCopyCommandClick(config)}
+                  className="cursor-p"
+                />
               </div>
             </pre>
           </Card>
