@@ -33,6 +33,11 @@ export const StyledSelectInput = styled('div')<IProps>`
       outline: none;
       appearance: none;
       padding: 0 ${SPACINGS[4]} 0 0;
+
+      option {
+        background: ${COLORS.black};
+        color: ${COLORS.white};
+      }
     }
 
     .icon {
