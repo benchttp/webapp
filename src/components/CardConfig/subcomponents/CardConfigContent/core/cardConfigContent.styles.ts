@@ -18,13 +18,13 @@ export const StyledCardConfigContent = styled('div')`
   }
 
   tr {
-    border-bottom: 1px solid #6a6a6a;
-    border-left: 1px solid #6a6a6a;
-    border-right: 1px solid #6a6a6a;
+    border-bottom: 1px solid ${COLORS.grey4};
+    border-left: 1px solid ${COLORS.grey4};
+    border-right: 1px solid ${COLORS.grey4};
   }
 
   thead {
-    border-top: 1px solid #6a6a6a;
+    border-top: 1px solid ${COLORS.grey4};
   }
 
   keyValueCouple {
@@ -34,7 +34,7 @@ export const StyledCardConfigContent = styled('div')`
   .keyColumn {
     width: 30%;
     padding: ${SPACINGS[1]};
-    border-right: 1px solid #6a6a6a;
+    border-right: 1px solid ${COLORS.grey4};
   }
 
   .valueColumn {

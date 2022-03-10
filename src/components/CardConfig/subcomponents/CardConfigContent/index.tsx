@@ -6,7 +6,9 @@ import { StyledCardConfigContent } from './core/cardConfigContent.styles'
 import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
 
 export const CardConfigContent: FC<IProps> = (props) => {
-  const { className } = props
+  const className = props.className
+  const concurrency = props.concurrency
+  const interval = props.interval
 
   const headerContent = Object.entries({
     key0: 'value0',
@@ -45,7 +47,7 @@ export const CardConfigContent: FC<IProps> = (props) => {
             weight={FontWeights.BOLD}
             size={FontSizes.LARGE}
           >
-            1
+            {concurrency}
           </Text>
           <Text weight={FontWeights.MEDIUM}>Concurrency</Text>
         </div>
@@ -55,7 +57,7 @@ export const CardConfigContent: FC<IProps> = (props) => {
             weight={FontWeights.BOLD}
             size={FontSizes.LARGE}
           >
-            50ms
+            {interval}
           </Text>
           <Text>Interval</Text>
         </div>
