@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { Dropdown, Text, CardConfig } from 'components'
+import { Text, CardConfig } from 'components'
 import { FontFamilies, FontSizes } from 'shared/style/constants'
 import { MainLayout } from 'layouts/MainLayout'
 
