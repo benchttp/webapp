@@ -9,10 +9,11 @@ export const CardConfigContent: FC<IProps> = (props) => {
   const { className } = props
 
   const headerContent = Object.entries({
-    key0: 'val0',
-    key1: 'val1',
-    key2: 'val2',
-    key3: 'val3',
+    key0: 'value0',
+    key1: 'value1',
+    key2: 'value2',
+    key3: 'value3',
+    key4: 'value4',
   })
 
   const headersList = headerContent.map(([key, value], index) => {
