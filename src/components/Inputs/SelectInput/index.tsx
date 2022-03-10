@@ -31,7 +31,7 @@ export const SelectInput: FC<IProps> = (props) => {
           onChange={handleChange(setSelectedIndex)}
           name={name}
           id={name}
-          value={options[selectedIndex]}
+          value={selectedIndex}
         >
           {placeholder && <option disabled>{placeholder}</option>}
           {options.map((option, index) => (
