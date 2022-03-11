@@ -8,7 +8,7 @@ import {
   FontWeights,
   FontSizes,
 } from 'shared/style/constants'
-import { convertInMs } from 'shared/utils/helpers'
+import { convertInMs } from 'shared/helpers/utils'
 import { Download } from 'react-feather'
 import { useGetReportsByIdQuery, useGetStatByIdQuery } from 'shared/store/apis'
 import { useAppSelector } from 'shared/store'
