@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/benchttp/webapp/actions/workflows/ci.yml?query=branch%3Amain">
-    <img alt="Github Worklow Status" src="https://img.shields.io/github/workflow/status/benchttp/runner/Lint%20&%20Test%20&%20Build"></a>
+    <img alt="Github Worklow Status" src="https://img.shields.io/github/workflow/status/benchttp/webapp/Lint%20&%20Test%20&%20Build"></a>
 </p>
 
 ## WebApp
