@@ -7,27 +7,13 @@ import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
 import { useGetReportsByIdQuery } from 'shared/store/apis'
 import { useAppSelector } from 'shared/store'
 import { skipToken } from '@reduxjs/toolkit/dist/query'
+import { getHeadersArray } from './core/cardConfigContent.helpers'
 
 export const CardConfigContent: FC = () => {
   const selectedRunId = useAppSelector((state) => state.general.selectedRunId)
   const { data: report } = useGetReportsByIdQuery(selectedRunId ?? skipToken)
 
-  const headersList = report
-    ? Object.entries(report.metadata.config.request.header).map(
-        ([key, value], index) => {
-          return (
-            <tr key={index} className="f keyValueCouple">
-              <td className="keyColumn">
-                <Text>{key}</Text>
-              </td>
-              <td className="valueColumn">
-                <Text>{value.join()}</Text>
-              </td>
-            </tr>
-          )
-        }
-      )
-    : null
+  const headersArray = getHeadersArray(report)
 
   return (
     <StyledCardConfigContent className="mt-4 mr-2 ml-2 mb-2 p-3 br-1">
@@ -40,7 +26,7 @@ export const CardConfigContent: FC = () => {
         >
           Headers
         </Text>
-        {headersList && headersList.length !== 0 ? (
+        {headersArray && headersArray.length !== 0 ? (
           <table className="f f-jc-space-a headersListContainer">
             <thead>
               <tr className="f keyValueCouple">
@@ -48,7 +34,20 @@ export const CardConfigContent: FC = () => {
                 <th className="valueColumn">Value</th>
               </tr>
             </thead>
-            <tbody>{headersList}</tbody>
+            <tbody>
+              {headersArray.map(([key, value], index) => {
+                return (
+                  <tr key={index} className="f keyValueCouple">
+                    <td className="keyColumn">
+                      <Text>{key}</Text>
+                    </td>
+                    <td className="valueColumn">
+                      <Text>{value.join()}</Text>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
           </table>
         ) : (
           <Text>There are no headers.</Text>
