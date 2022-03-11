@@ -38,8 +38,18 @@ You will also see any lint errors in the console.
 
 We provide styles that are shared all over the WebApp [in this directory](https://github.com/benchttp/webapp/tree/main/src/shared/style).
 
-We also use [StoryBook](https://storybook.js.org/) to build UI components. Multiple helpers can be find [here](https://github.com/benchttp/webapp/tree/main/src/shared/helpers).
+We also use [Storybook](https://storybook.js.org/) to build UI components. Multiple helpers can be find [here](https://github.com/benchttp/webapp/tree/main/src/shared/helpers).
 
 ## Other repositories
 
 Benchttp is separated in 6 repositories. You can visit [the others repositories here](https://github.com/benchttp).
+
+## Packages
+
+Benchttp use some packages:
+
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Router](https://v5.reactrouter.com/)
+- [Storybook](https://storybook.js.org/)
+- [Styled Components](https://styled-components.com/)
+- [Nivo](https://github.com/plouc/nivo)
