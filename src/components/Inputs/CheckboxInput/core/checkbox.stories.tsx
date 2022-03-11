@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { hideControl } from 'shared/helpers/storybook'
+import { hideStorybookControl } from 'shared/helpers/utils'
 import { useState } from 'react'
 import { CheckboxInput } from '..'
 
@@ -12,9 +12,9 @@ export default {
     label: 'Checkbox Input',
   },
   argTypes: {
-    id: hideControl,
-    className: hideControl,
-    name: hideControl,
+    id: hideStorybookControl,
+    className: hideStorybookControl,
+    name: hideStorybookControl,
   },
 } as ComponentMeta<typeof CheckboxInput>
 

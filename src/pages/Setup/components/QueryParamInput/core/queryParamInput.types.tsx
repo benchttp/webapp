@@ -1,6 +1,6 @@
 import { IQueryParam } from 'pages/Setup/core/setup.types'
 import { Dispatch, SetStateAction } from 'react'
-import { IStandardProps } from 'shared/helpers/types'
+import { IStandardProps } from 'shared/types/common'
 
 export interface IProps extends IStandardProps {
   index: number

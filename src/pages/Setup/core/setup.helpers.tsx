@@ -151,8 +151,6 @@ export const handleCopyCommandClick = (
     if (config.request.url) {
       urlArg = ` -url ${config.request.url}`
 
-      console.log(queryParams.values())
-
       if ([...queryParams].length) {
         urlArg = urlArg.concat(`?${queryParams.toString()}`)
       }

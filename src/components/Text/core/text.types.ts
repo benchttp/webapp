@@ -1,4 +1,4 @@
-import { IStandardProps } from 'shared/helpers/types'
+import { IStandardProps } from 'shared/types/common'
 import {
   Colors,
   FontFamilies,

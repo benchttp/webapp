@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react'
 
-import { IStandardProps } from 'shared/helpers/types'
+import { IStandardProps } from 'shared/types/common'
 
 import { ExpansionPanelContent } from '../composition/ExpansionPanelContent'
 import { ExpansionPanelHeader } from '../composition/ExpansionPanelHeader'

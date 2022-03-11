@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { TextInput } from 'components'
-import { hideControl } from 'shared/helpers/storybook'
+import { hideStorybookControl } from 'shared/helpers/utils'
 import { Colors, Icons } from 'shared/style/constants'
 import { useState } from 'react'
 
@@ -13,9 +13,9 @@ export default {
     name: 'textInput',
   },
   argTypes: {
-    id: hideControl,
-    className: hideControl,
-    name: hideControl,
+    id: hideStorybookControl,
+    className: hideStorybookControl,
+    name: hideStorybookControl,
   },
 } as ComponentMeta<typeof TextInput>
 
