@@ -1,9 +1,12 @@
 import {
+  Award,
+  BarChart2,
   ChevronLeft,
   Clock,
   Download,
   Search,
   Settings,
+  Target,
   Zap,
 } from 'react-feather'
 
@@ -115,6 +118,9 @@ export enum Icons {
   SETTINGS = 'settings',
   CLOCK = 'clock',
   CHEVRON_LEFT = 'chevronLeft',
+  CHART = 'chart',
+  AWARD = 'award',
+  TARGET = 'target',
 }
 
 export const ICONS = {
@@ -124,4 +130,7 @@ export const ICONS = {
   [Icons.SETTINGS]: Settings,
   [Icons.CLOCK]: Clock,
   [Icons.CHEVRON_LEFT]: ChevronLeft,
+  [Icons.CHART]: BarChart2,
+  [Icons.AWARD]: Award,
+  [Icons.TARGET]: Target,
 }

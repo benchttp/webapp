@@ -6,31 +6,21 @@ import {
   SPACINGS,
 } from 'shared/style/constants'
 import styled from 'styled-components'
-import { IPropsStyle } from './cardResult.types'
+import { IProps } from './cardResult.types'
 
-export const StyledCardResult = styled('div')<IPropsStyle>`
+export const StyledCardResult = styled('div')<IProps>`
   .card {
-    display: flex;
-    justify-content: row;
-    justify-content: flex-start;
     position: relative;
   }
 
-  .result-text {
-    display: flex;
-    flex-direction column;
-    justify-content: space-between;
-    margin-left: ${SPACINGS[2]};
+  .icon {
+    flex: 0 0 auto;
+    background: ${({ iconColor }) => COLORS[iconColor]}50;
+    border-radius: 100px;
   }
 
-  .round-icon {
-    background: ${({ colorIcon }) => colorIcon && `${colorIcon}50`};
-    height: 64px;
-    width: 64px;
-    border-radius: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .text {
+    flex: 1 0 auto;
   }
 
   .overlay {

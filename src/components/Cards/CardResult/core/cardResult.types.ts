@@ -1,12 +1,13 @@
 import { ReactNode } from 'react'
+import { Colors, Icons } from 'shared/style/constants'
 import { IStandardProps } from 'shared/types/common'
 
 export interface IProps extends IStandardProps {
-  number: number
-  icon: ReactNode
-  colorIcon: string
+  result: number
+  icon: Icons
+  iconColor: Colors
   unit: 'ms' | '%'
-  text: ReactNode
+  text: string
   optionsData?: Option[]
   onChangeOption?: (value: number) => void
 }
@@ -14,8 +15,4 @@ export interface IProps extends IStandardProps {
 type Option = {
   label: ReactNode
   value: number
-}
-
-export interface IPropsStyle {
-  colorIcon: IProps['colorIcon']
 }
