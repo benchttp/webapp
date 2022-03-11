@@ -16,6 +16,8 @@ export default {
     id: hideStorybookControl,
     className: hideStorybookControl,
     name: hideStorybookControl,
+    value: hideStorybookControl,
+    setValue: hideStorybookControl,
   },
 } as ComponentMeta<typeof TextInput>
 

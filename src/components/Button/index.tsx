@@ -2,8 +2,8 @@ import { FC } from 'react'
 
 import { ButtonAppearance, Colors } from 'shared/style/constants'
 
-import { StyledButton } from './core/Button.styles'
-import { IProps } from './core/Button.types'
+import { StyledButton } from './core/button.styles'
+import { IProps } from './core/button.types'
 
 export const Button: FC<IProps> = ({
   children,

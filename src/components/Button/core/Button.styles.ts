@@ -7,7 +7,7 @@ import {
   SPACINGS,
 } from 'shared/style/constants'
 
-import { IProps } from './Button.types'
+import { IProps } from './button.types'
 
 export const StyledButton = styled('button')<IProps>`
   ${({ appearance, mainColor, secondaryColor, hover, active }) =>
