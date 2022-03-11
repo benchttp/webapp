@@ -34,6 +34,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
+## Design System
+
+We provide styles that are shared all over the WebApp [in this directory](https://github.com/benchttp/webapp/tree/main/src/shared/style).
+
+We also use [StoryBook](https://storybook.js.org/) to build UI components. Multiple helpers can be find [here](https://github.com/benchttp/webapp/tree/main/src/shared/helpers).
+
 ## Other repositories
 
 Benchttp is separated in 6 repositories. You can visit [the others repositories here](https://github.com/benchttp).
