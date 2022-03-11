@@ -18,7 +18,7 @@ jobs:
           node-version: 16.x
 
       - name: Install dependencies
-        run: yarn install --production
+        run: yarn install
 
       # Check #1: Lint
       - name: Lint
