@@ -1,7 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { SelectInput } from 'components'
-import { hideControl } from 'shared/helpers/storybook'
+import { hideStorybookControl } from 'shared/helpers/utils'
 import { useState } from 'react'
 
 export default {
@@ -13,9 +13,9 @@ export default {
     options: ['Option 1', 'Option 2', 'Option 3'],
   },
   argTypes: {
-    id: hideControl,
-    className: hideControl,
-    name: hideControl,
+    id: hideStorybookControl,
+    className: hideStorybookControl,
+    name: hideStorybookControl,
   },
 } as ComponentMeta<typeof SelectInput>
 

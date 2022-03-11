@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Tag } from 'components'
-import { hideControl } from 'shared/helpers/storybook'
+import { hideStorybookControl } from 'shared/helpers/utils'
 import { Colors } from 'shared/style/constants'
 
 export default {
@@ -12,8 +12,8 @@ export default {
     background: Colors.WHITE,
   },
   argTypes: {
-    className: hideControl,
-    id: hideControl,
+    className: hideStorybookControl,
+    id: hideStorybookControl,
   },
 } as ComponentMeta<typeof Tag>
 

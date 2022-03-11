@@ -12,22 +12,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Use Node.js 12.x
+      - name: Use Node.js 16.x
         uses: actions/setup-node@v1
         with:
-          node-version: 12.x
-  
+          node-version: 16.x
+
       - name: Install dependencies
-        run: npm install
+        run: yarn install --production
 
       # Check #1: Lint
       - name: Lint
-        run: npm run lint
+        run: yarn run lint
 
       # Check #2: Test
       - name: Test
-        run: npm run test
+        run: yarn run test
 
       # Check #3: Build
       - name: Build
-        run: npm run build
+        run: yarn run build

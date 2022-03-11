@@ -1,11 +1,13 @@
-import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
+import { Dispatch, MouseEventHandler } from 'react'
+import { setSelectedRun } from 'shared/store/slices/general'
 
 export const handleCardClick = (
-  setActiveCardIndex: Dispatch<SetStateAction<number>>,
-  index: number
+  dispatch: Dispatch<unknown>,
+  action: typeof setSelectedRun,
+  payload: string
 ) => {
   const handler: MouseEventHandler = () => {
-    setActiveCardIndex(index)
+    dispatch(action(payload))
   }
 
   return handler
