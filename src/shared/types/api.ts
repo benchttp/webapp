@@ -33,7 +33,7 @@ export interface IAPIReport {
           Fragment: string
           RawFragment: string
         }
-        header: any
+        header: Record<string, string[]>
         body: {
           type: string
           content: string
