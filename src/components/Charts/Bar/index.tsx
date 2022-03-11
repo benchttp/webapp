@@ -3,6 +3,7 @@ import { IProps, ITooltipProps } from './core/bar.types'
 import { StyledLineChart } from './core/bar.styles'
 import { ResponsiveBar } from '@nivo/bar'
 import { Text } from 'components'
+import { convertInMs } from 'shared/helpers/utils'
 import {
   Colors,
   FontFamilies,
@@ -12,9 +13,6 @@ import {
 
 export const ChartBar: FC<IProps> = (props) => {
   const { data } = props
-  const convertInMs = (time: number) => {
-    return parseInt((time / 1000).toFixed(0))
-  }
 
   const computeData = () => {
     const barChartData: Record<string, number> = {}

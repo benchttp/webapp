@@ -5,6 +5,10 @@ export const StyledHome = styled('div')`
   .chart {
     flex: 1 0 auto;
   }
+  .space-between {
+    display: flex;
+    justify-content: space-between;
+  }
   .stats {
     flex: 0 0 auto;
     display: grid;

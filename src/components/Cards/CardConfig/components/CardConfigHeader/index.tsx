@@ -8,7 +8,7 @@ import {
   FontWeights,
   FontSizes,
 } from 'shared/style/constants'
-
+import { convertInMs } from 'shared/helpers/utils'
 import { Download } from 'react-feather'
 import { useGetReportsByIdQuery, useGetStatByIdQuery } from 'shared/store/apis'
 import { useAppSelector } from 'shared/store'
@@ -58,7 +58,7 @@ export const CardConfigHeader: FC = () => {
               weight={FontWeights.BOLD}
               size={FontSizes.LARGE}
             >
-              {report.metadata.config.runner.interval}
+              {convertInMs(report.metadata.config.runner.interval)}
             </Text>
             <Text weight={FontWeights.MEDIUM}>Interval</Text>
           </div>
@@ -68,7 +68,7 @@ export const CardConfigHeader: FC = () => {
               weight={FontWeights.BOLD}
               size={FontSizes.LARGE}
             >
-              {report.metadata.config.runner.globalTimeout}
+              {convertInMs(report.metadata.config.runner.globalTimeout)}
             </Text>
             <Text weight={FontWeights.MEDIUM}>Test timeout</Text>
           </div>
@@ -78,7 +78,7 @@ export const CardConfigHeader: FC = () => {
               weight={FontWeights.BOLD}
               size={FontSizes.LARGE}
             >
-              {report.metadata.config.runner.requestTimeout}
+              {convertInMs(report.metadata.config.runner.requestTimeout)}
             </Text>
             <Text weight={FontWeights.MEDIUM}>Request timeout</Text>
           </div>
