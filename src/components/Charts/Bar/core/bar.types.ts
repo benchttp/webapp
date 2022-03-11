@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { IStandardProps } from 'shared/helpers/types'
+import { IStandardProps } from 'shared/types'
 
 export interface IProps extends IStandardProps {
   data: { name: string; time: number }[]
