@@ -1,6 +1,6 @@
 import { FC, useEffect, useRef, useState } from 'react'
 
-import { IStandardProps } from 'shared/helpers/types'
+import { IStandardProps } from 'shared/types/common'
 
 import { StyledDropdown } from './core/dropdown.styles'
 

@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { stringify } from 'yaml'
 
 export const debounce = (fn: Function, ms: number) => {
@@ -41,3 +42,12 @@ export const copyToClipboard = (text: string) => {
   const clipboard = navigator.clipboard
   return clipboard.writeText(text)
 }
+
+export const hideStorybookControl = {
+  table: {
+    disable: true,
+  },
+}
+
+export const formatDate = (date: string) =>
+  dayjs(date).format('DD/MM/YYYY - HH:mm')

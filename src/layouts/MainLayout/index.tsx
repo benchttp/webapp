@@ -15,7 +15,7 @@ export const MainLayout: FC<IProps> = (props) => {
         <div className="content p-4">{children}</div>
       ) : (
         <div className="main f f-jc-space-b">
-          <Sidebar tests={[{ name: 'Auth0' }, { name: 'JWT' }]} />
+          <Sidebar />
           <div className="content p-4">{children}</div>
         </div>
       )}

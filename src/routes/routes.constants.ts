@@ -1,12 +1,12 @@
 import { Setup } from 'pages/Setup'
-import { Index } from '../pages/Index'
+import { Home } from '../pages/Home'
 import { IRoute } from './routes.types'
 
 export const ROUTES: IRoute[] = [
   {
-    key: 'index',
+    key: 'home',
     path: '/',
-    page: Index,
+    page: Home,
   },
   {
     key: 'setup',

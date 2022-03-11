@@ -1,7 +1,8 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Text } from 'components'
-import { hideControl } from 'shared/helpers/storybook'
+import { hideStorybookControl } from 'shared/helpers/utils'
+
 import {
   Colors,
   FontFamilies,
@@ -20,8 +21,8 @@ export default {
     color: Colors.WHITE,
   },
   argTypes: {
-    className: hideControl,
-    id: hideControl,
+    className: hideStorybookControl,
+    id: hideStorybookControl,
   },
 } as ComponentMeta<typeof Text>
 
