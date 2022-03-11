@@ -88,7 +88,7 @@ export const ChartBar: FC<IProps> = (props) => {
           tickSize: 5,
           tickPadding: 5,
           tickRotation: 0,
-          legend: 'Step request',
+          legend: 'Event request',
           legendPosition: 'middle',
           legendOffset: -40,
         }}

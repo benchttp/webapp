@@ -18,6 +18,12 @@ export const Index: FC = () => {
         responseSize={123}
         responseTime={10}
       />
+      <CardRequest
+        index={1}
+        responseCode={500}
+        responseSize={23040}
+        responseTime={1120}
+      />
     </MainLayout>
   )
 }

@@ -5,6 +5,7 @@ import { FC, useContext } from 'react'
 import { ChevronDown } from 'react-feather'
 import {
   ButtonAppearance,
+  COLORS,
   Colors,
   FontFamilies,
   FontWeights,
@@ -16,13 +17,16 @@ export const CardRequestHeader: FC<IProps> = (props) => {
   const { index, responseCode, responseSize, responseTime } = props
   const expansionPanelContext = useContext(ExpansionPanelContext)
   const { toggle } = { ...expansionPanelContext }
+  const backgroundStatus =
+    responseCode >= 200 && responseCode <= 310 ? COLORS.green : COLORS.DELETE
   return (
     <StyledCardRequestHeader
       {...props}
       onClick={toggle}
-      className="f f-jc-space-b"
+      className="f f-jc-space-b pointer"
+      backgroundStatus={backgroundStatus}
     >
-      <div className="f f-ai-center">
+      <div className="f f-ai-center grid">
         <Text
           className="mr-5"
           font={FontFamilies.POPPINS}
@@ -30,17 +34,17 @@ export const CardRequestHeader: FC<IProps> = (props) => {
         >
           #{index}
         </Text>
-        <div className="f f-ai-center mr-4">
+        <div className="f f-ai-center column">
           <p className="roundedColorResponse mr-2" />
           <Text>{responseCode}</Text>
         </div>
-        <Text className="mr-4">{responseTime} ms</Text>
-        <Text>{responseSize} B</Text>
+        <Text className="column">{responseTime} ms</Text>
+        <Text className="column">{responseSize} B</Text>
       </div>
       <div className="f f-ai-center">
         <Button
           appearance={ButtonAppearance.OUTLINE}
-          mainColor={Colors.PRIMARY}
+          mainColor={Colors.WHITE}
           secondaryColor={Colors.BLACK}
           hover={true}
           active={true}
