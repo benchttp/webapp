@@ -11,6 +11,10 @@ export const debounce = (fn: Function, ms: number) => {
   }
 }
 
+export const convertInMs = (time: number) => {
+  return parseInt((time / 1000000).toFixed(0))
+}
+
 export const getInitials = (str: string) => {
   return str
     .split(' ')

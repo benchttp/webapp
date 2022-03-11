@@ -47,7 +47,7 @@ export const LineChart: FC<IProps> = (props) => {
     <StyledLineChart {...props}>
       <ResponsiveLine
         data={data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 50, right: 30, bottom: 50, left: 60 }}
         xScale={{ type: 'point' }}
         yScale={{
           type: 'linear',

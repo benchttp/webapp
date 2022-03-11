@@ -5,4 +5,5 @@ export interface IProps extends IStandardProps {
   responseCode: number
   responseTime: number
   responseSize: number
+  chartData: { name: string; time: number }[]
 }
