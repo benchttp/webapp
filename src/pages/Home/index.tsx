@@ -112,12 +112,14 @@ export const Home: FC = () => {
                 {showCumulativeChart ? (
                   <LineChart
                     legendY="time/req"
-                    data={[{ id: 'linear', data: graphData }]}
+                    data={[{ id: 'linear', data: graphData ?? [] }]}
                   />
                 ) : (
                   <LineChart
                     legendY="time/req"
-                    data={[{ id: 'cumulative', data: graphDataCumulative }]}
+                    data={[
+                      { id: 'cumulative', data: graphDataCumulative ?? [] },
+                    ]}
                   />
                 )}
               </Card>
