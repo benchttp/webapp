@@ -72,6 +72,10 @@ ${BORDER_RADIUS.map(
   `
 )}
 
+.c-primary {
+    color: ${COLORS.primary}
+}
+
 .f {
     display: flex;
 }

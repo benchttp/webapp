@@ -56,7 +56,12 @@ export const Home: FC = () => {
                 <CardResult
                   icon={Icons.CLOCK}
                   iconColor={Colors.PRIMARY}
-                  text="of requests are faster"
+                  text={
+                    <>
+                      <span className="c-primary">90%</span> of requests are
+                      faster
+                    </>
+                  }
                   result={stat.time.deciles[0]}
                   unit="ms"
                 />

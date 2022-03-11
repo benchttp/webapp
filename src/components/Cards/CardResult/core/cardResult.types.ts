@@ -8,7 +8,7 @@ export interface IProps extends IStandardProps {
   icon: Icons
   iconColor: Colors
   unit: 'ms' | '%'
-  text: string
+  text: ReactNode
   optionsData?: Option[]
   onChangeOption?: (value: number) => void
 }
