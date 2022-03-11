@@ -6,6 +6,7 @@ import { MainLayout } from 'layouts/MainLayout'
 import { useGetReportsByIdQuery, useGetStatByIdQuery } from 'shared/store/apis'
 import { useAppSelector } from 'shared/store'
 import { Loader } from 'react-feather'
+import { convertInMs } from 'shared/utils/helpers'
 import { useHome } from './core/home.hook'
 import { skipToken } from '@reduxjs/toolkit/dist/query'
 import { StyledHome } from './core/home.styles'
@@ -53,7 +54,7 @@ export const Home: FC = () => {
                   icon={Icons.CLOCK}
                   iconColor={Colors.PRIMARY}
                   text="of requests are faster"
-                  result={stat.time.deciles[0]}
+                  result={convertInMs(stat.time.deciles[0])}
                   unit="ms"
                 />
                 <CardResult
@@ -71,7 +72,7 @@ export const Home: FC = () => {
                   icon={Icons.TARGET}
                   iconColor={Colors.BLUE}
                   text="requests standard deviation"
-                  result={stat.time.standardDeviation}
+                  result={convertInMs(stat.time.standardDeviation)}
                   unit="ms"
                 />
                 {/* <CardResult
@@ -85,14 +86,14 @@ export const Home: FC = () => {
                   icon={Icons.CHART}
                   iconColor={Colors.WHITE}
                   text="requests average response"
-                  result={stat.time.mean}
+                  result={convertInMs(stat.time.mean)}
                   unit="ms"
                 />
                 <CardResult
                   icon={Icons.CHART}
                   iconColor={Colors.WHITE}
                   text="requests median response"
-                  result={stat.time.median}
+                  result={convertInMs(stat.time.median)}
                   unit="ms"
                 />
               </div>
