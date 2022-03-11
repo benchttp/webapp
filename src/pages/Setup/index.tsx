@@ -1,17 +1,20 @@
+import { FC, useState } from 'react'
+import { ChevronLeft, Copy, Download } from 'react-feather'
+import { useNavigate } from 'react-router-dom'
+import { v4 as uuid } from 'uuid'
+
 import {
   Card,
   Text,
   TextInput,
   SelectInput,
-  QueryParamInput,
-  HeaderInput,
   NumberInput,
   Button,
+  TextAreaInput,
+  CheckboxInput,
 } from 'components'
-import { MainLayout } from 'layouts/MainLayout'
-import { FC, useState } from 'react'
-import { ChevronLeft, Copy, Download } from 'react-feather'
-import { useNavigate } from 'react-router-dom'
+import { MainLayout } from 'layouts'
+import { getYaml } from 'shared/helpers/utils'
 import {
   ButtonAppearance,
   Colors,
@@ -19,6 +22,13 @@ import {
   FontSizes,
   FontWeights,
 } from 'shared/style/constants'
+
+import { HeaderInput, QueryParamInput } from './components'
+import {
+  DEFAULT_HEADERS,
+  DEFAULT_QUERY_PARAMS,
+  METHOD_OPTIONS,
+} from './core/setup.constants'
 import {
   handleAddHeaderClick,
   handleAddQueryParamClick,
@@ -26,20 +36,9 @@ import {
   handleCopyCommandClick,
   handleDownloadYamlClick,
 } from './core/setup.helpers'
+import { useSetup } from './core/setup.hook'
 import { StyledSetup } from './core/setup.styles'
 import { IForm, IHeader, IQueryParam } from './core/setup.types'
-import {
-  DEFAULT_HEADERS,
-  DEFAULT_QUERY_PARAMS,
-  METHOD_OPTIONS,
-} from './core/setup.constants'
-import { useSetup } from './core/setup.hook'
-import { v4 as uuid } from 'uuid'
-import { TextAreaInput } from 'components/Inputs/TextAreaInput'
-import { CheckboxInput } from 'components/Inputs/CheckboxInput'
-import { getYaml } from 'shared/helpers/utils'
-
-export type { IForm as ISetupForm } from './core/setup.types'
 
 export const Setup: FC = () => {
   const navigate = useNavigate()

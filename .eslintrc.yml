@@ -37,6 +37,18 @@ rules:
   # Import rules
   import/newline-after-import: error
   import/no-default-export: error
+  import/order:
+    - error
+    - groups:
+        - builtin
+        - external
+        - internal
+        - [parent, sibling]
+        - index
+      newlines-between: always
+      alphabetize:
+        order: asc
+        caseInsensitive: true
 
   # React rules
   react/react-in-jsx-scope: off

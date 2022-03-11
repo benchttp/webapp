@@ -1,4 +1,5 @@
 import { ChangeEventHandler } from 'react'
+
 import { IProps } from './selectInput.types'
 
 export const handleChange = (

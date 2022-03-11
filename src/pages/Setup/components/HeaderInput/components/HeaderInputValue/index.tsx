@@ -1,6 +1,8 @@
-import { TextInput } from 'components/Inputs/TextInput'
 import { FC, useState } from 'react'
 import { PlusCircle, Trash2 } from 'react-feather'
+
+import { TextInput } from 'components'
+
 import {
   handleAddHeaderValueClick,
   handleDeleteHeaderValueClick,

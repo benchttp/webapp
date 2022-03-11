@@ -1,4 +1,6 @@
 import { FC } from 'react'
+import { Zap } from 'react-feather'
+import { useNavigate } from 'react-router-dom'
 
 import { Text, Avatar, Button } from 'components'
 import { BENCHTTP } from 'shared/helpers/constants'
@@ -10,11 +12,9 @@ import {
   FontWeights,
 } from 'shared/style/constants'
 
+import { handleGenerateConfigClick } from './core/header.helpers'
 import { StyledHeader } from './core/header.styles'
 import { IProps } from './core/header.types'
-import { Zap } from 'react-feather'
-import { useNavigate } from 'react-router-dom'
-import { handleGenerateConfigClick } from './core/header.helpers'
 
 export const Header: FC<IProps> = (props) => {
   const { className } = props

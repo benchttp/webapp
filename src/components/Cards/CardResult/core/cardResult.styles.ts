@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 import {
   BORDER_RADIUS,
   FONT_SIZES,
@@ -5,7 +7,7 @@ import {
   COLORS,
   SPACINGS,
 } from 'shared/style/constants'
-import styled from 'styled-components'
+
 import { IProps } from './cardResult.types'
 
 export const StyledCardResult = styled('div')<IProps>`

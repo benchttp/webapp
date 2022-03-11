@@ -1,10 +1,12 @@
 import { FC, useState } from 'react'
+import { Trash2 } from 'react-feather'
+
 import { TextInput } from 'components/Inputs/TextInput'
+
+import { handleDeleteClick } from './core/queryParamInput.helpers'
+import { useQueryParamInput } from './core/queryParamInput.hook'
 import { IProps } from './core/queryParamInput.types'
 import { StyledQueryParamInput } from './core/queryParamsInput.styles'
-import { Trash2 } from 'react-feather'
-import { useQueryParamInput } from './core/queryParamInput.hook'
-import { handleDeleteClick } from './core/queryParamInput.helpers'
 
 export const QueryParamInput: FC<IProps> = (props) => {
   const { className, index, setQueryParams, queryParams } = props

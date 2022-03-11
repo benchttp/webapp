@@ -1,5 +1,6 @@
-import { COLORS, SPACINGS } from 'shared/style/constants'
 import styled from 'styled-components'
+
+import { COLORS, SPACINGS } from 'shared/style/constants'
 
 export const StyledCheckbox = styled('div')`
   .input {

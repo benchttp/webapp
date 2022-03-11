@@ -2,7 +2,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Text } from 'components'
 import { hideStorybookControl } from 'shared/helpers/utils'
-
 import {
   Colors,
   FontFamilies,

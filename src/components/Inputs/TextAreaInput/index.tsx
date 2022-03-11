@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { handleChange } from './core/textAreaInput.helpers'
 import { StyledTextAreaInput } from './core/textAreaInput.styles'
 import { IProps } from './core/textAreaInput.types'

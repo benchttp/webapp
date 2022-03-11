@@ -1,10 +1,12 @@
 import styled from 'styled-components'
+
 import {
   BORDER_RADIUS,
   ButtonAppearance,
   COLORS,
   SPACINGS,
 } from 'shared/style/constants'
+
 import { IProps } from './Button.types'
 
 export const StyledButton = styled('button')<IProps>`

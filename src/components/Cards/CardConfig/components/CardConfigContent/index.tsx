@@ -1,8 +1,9 @@
-import { Text } from 'components/Text'
 import { FC } from 'react'
 
-import { StyledCardConfigContent } from './core/cardConfigContent.styles'
+import { Text } from 'components'
 import { FontFamilies, FontSizes, FontWeights } from 'shared/style/constants'
+
+import { StyledCardConfigContent } from './core/cardConfigContent.styles'
 
 export const CardConfigContent: FC = () => {
   const headerContent = Object.entries({

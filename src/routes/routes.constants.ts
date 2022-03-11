@@ -1,5 +1,5 @@
-import { Setup } from 'pages/Setup'
-import { Home } from '../pages/Home'
+import { Setup, Home } from 'pages'
+
 import { IRoute } from './routes.types'
 
 export const ROUTES: IRoute[] = [

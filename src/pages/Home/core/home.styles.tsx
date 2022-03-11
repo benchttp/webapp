@@ -1,5 +1,6 @@
-import { SPACINGS } from 'shared/style/constants'
 import styled from 'styled-components'
+
+import { SPACINGS } from 'shared/style/constants'
 
 export const StyledHome = styled('div')`
   .chart {

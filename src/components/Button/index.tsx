@@ -1,4 +1,5 @@
 import { FC } from 'react'
+
 import { ButtonAppearance, Colors } from 'shared/style/constants'
 
 import { StyledButton } from './core/Button.styles'

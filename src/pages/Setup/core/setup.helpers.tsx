@@ -1,8 +1,10 @@
 import { Dispatch, MouseEventHandler, SetStateAction } from 'react'
 import { NavigateFunction } from 'react-router-dom'
-import { IForm, IHeader, IQueryParam } from './setup.types'
 import { v4 } from 'uuid'
+
 import { copyToClipboard, download, getYaml } from 'shared/helpers/utils'
+
+import { IForm, IHeader, IQueryParam } from './setup.types'
 
 export const handleBackClick = (
   navigate: NavigateFunction

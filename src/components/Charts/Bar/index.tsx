@@ -1,7 +1,6 @@
-import { FC } from 'react'
-import { IProps, ITooltipProps } from './core/bar.types'
-import { StyledLineChart } from './core/bar.styles'
 import { ResponsiveBar } from '@nivo/bar'
+import { FC } from 'react'
+
 import { Text } from 'components'
 import {
   Colors,
@@ -9,6 +8,9 @@ import {
   FontSizes,
   FontWeights,
 } from 'shared/style/constants'
+
+import { StyledLineChart } from './core/bar.styles'
+import { IProps, ITooltipProps } from './core/bar.types'
 
 export const ChartBar: FC<IProps> = (props) => {
   const { data } = props

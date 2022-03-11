@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+
 import { CardResult } from 'components'
 import { Colors, Icons } from 'shared/style/constants'
 

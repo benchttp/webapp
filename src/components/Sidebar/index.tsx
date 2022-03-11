@@ -1,17 +1,17 @@
 import { FC, useState } from 'react'
+import { Loader } from 'react-feather'
 
 import { CardSidebar, TextInput } from 'components'
+import { formatDate } from 'shared/helpers/utils'
+import { useAppDispatch, useAppSelector } from 'shared/store'
+import { useGetStatsQuery } from 'shared/store/apis/benchttp'
+import { setSelectedRun } from 'shared/store/slices/general'
 import { Colors, Icons } from 'shared/style/constants'
 
 import { handleCardClick } from './core/sidebar.helpers'
 import { useSidebar } from './core/sidebar.hook'
 import { StyledSidebar } from './core/sidebar.styles'
 import { IProps } from './core/sidebar.types'
-import { Loader } from 'react-feather'
-import { setSelectedRun } from 'shared/store/slices/general'
-import { useAppDispatch, useAppSelector } from 'shared/store'
-import { useGetStatsQuery } from 'shared/store/apis'
-import { formatDate } from 'shared/helpers/utils'
 
 export type { IProps as ISidebarProps } from './core/sidebar.types'
 

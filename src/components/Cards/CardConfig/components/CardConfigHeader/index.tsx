@@ -1,18 +1,20 @@
+import { skipToken } from '@reduxjs/toolkit/dist/query'
 import { FC, useContext } from 'react'
+import { Download } from 'react-feather'
 
 import { ExpansionPanelContext, Tag, Text } from 'components'
 import { HttpMethods } from 'shared/helpers/constants'
+import { useAppSelector } from 'shared/store'
+import {
+  useGetReportsByIdQuery,
+  useGetStatByIdQuery,
+} from 'shared/store/apis/benchttp'
 import {
   Colors,
   FontFamilies,
   FontWeights,
   FontSizes,
 } from 'shared/style/constants'
-
-import { Download } from 'react-feather'
-import { useGetReportsByIdQuery, useGetStatByIdQuery } from 'shared/store/apis'
-import { useAppSelector } from 'shared/store'
-import { skipToken } from '@reduxjs/toolkit/dist/query'
 
 export const CardConfigHeader: FC = () => {
   const expansionPanelContext = useContext(ExpansionPanelContext)

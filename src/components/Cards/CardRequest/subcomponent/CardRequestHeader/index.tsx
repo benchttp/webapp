@@ -1,8 +1,8 @@
-import { Button } from 'components/Button'
-import { ExpansionPanelContext } from 'components/ExpansionPanel'
-import { Text } from 'components/Text'
 import { FC, useContext } from 'react'
 import { ChevronDown } from 'react-feather'
+
+import { Button, Text } from 'components'
+import { ExpansionPanelContext } from 'components/ExpansionPanel'
 import {
   ButtonAppearance,
   COLORS,
@@ -10,6 +10,7 @@ import {
   FontFamilies,
   FontWeights,
 } from 'shared/style/constants'
+
 import { StyledCardRequestHeader } from './core/cardRequestHeader.styles'
 import { IProps } from './core/cardRequestHeader.types'
 

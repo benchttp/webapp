@@ -1,6 +1,7 @@
-import { Card, Text } from 'components'
 import { useState, FC, createElement } from 'react'
 import { Settings } from 'react-feather'
+
+import { Card, Text } from 'components'
 import {
   FontSizes,
   FontWeights,
@@ -8,6 +9,7 @@ import {
   ICONS,
   COLORS,
 } from 'shared/style/constants'
+
 import { StyledCardResult } from './core/cardResult.styles'
 import { IProps } from './core/cardResult.types'
 

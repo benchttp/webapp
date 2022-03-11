@@ -1,7 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux'
 
-import { benchttpApi } from 'shared/store/apis'
+import { benchttpApi } from 'shared/store/apis/benchttp'
+
 import { generalSliceReducer } from './slices/general'
 
 export const store = configureStore({

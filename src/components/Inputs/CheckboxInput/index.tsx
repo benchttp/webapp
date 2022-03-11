@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { Check } from 'react-feather'
+
 import { COLORS } from 'shared/style/constants'
+
 import { handleChange } from './core/checkbox.helpers'
 import { StyledCheckbox } from './core/checkboxInput.styles'
 import { IProps } from './core/checkboxInput.types'

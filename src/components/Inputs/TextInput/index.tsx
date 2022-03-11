@@ -3,8 +3,8 @@ import { createElement, FC } from 'react'
 import { COLORS, Colors, ICONS } from 'shared/style/constants'
 
 import { handleChange } from './core/textInput.helpers'
-import { IProps } from './core/textInput.types'
 import { StyledTextInput } from './core/textInput.styles'
+import { IProps } from './core/textInput.types'
 
 export const TextInput: FC<IProps> = (props) => {
   const {

@@ -1,6 +1,8 @@
 import { FC } from 'react'
 import { ChevronDown } from 'react-feather'
+
 import { COLORS } from 'shared/style/constants'
+
 import { handleChange } from './core/selectInput.helpers'
 import { StyledSelectInput } from './core/selectInput.styles'
 import { IProps } from './core/selectInput.types'

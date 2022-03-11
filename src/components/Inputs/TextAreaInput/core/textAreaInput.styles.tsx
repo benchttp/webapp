@@ -1,5 +1,6 @@
-import { COLORS, FONT_SIZES } from 'shared/style/constants'
 import styled from 'styled-components'
+
+import { COLORS, FONT_SIZES } from 'shared/style/constants'
 
 export const StyledTextAreaInput = styled('div')`
   .input {

@@ -1,7 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { useState } from 'react'
 
 import { hideStorybookControl } from 'shared/helpers/utils'
-import { useState } from 'react'
+
 import { CheckboxInput } from '..'
 
 export default {

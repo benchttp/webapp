@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from 'react'
 
 import { debounce } from 'shared/helpers/utils'
+
 import { handleSearchInputChange } from './sidebar.helpers'
 import { IHook } from './sidebar.types'
 

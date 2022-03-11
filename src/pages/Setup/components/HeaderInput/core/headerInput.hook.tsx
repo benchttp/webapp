@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import { IHook } from './headerInput.types'
 
 export const useHeaderInput: IHook = ({

@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 import {
   FONT_SIZES,
   COLORS,
@@ -5,7 +7,7 @@ import {
   FONT_WEIGHTS,
   SPACINGS,
 } from 'shared/style/constants'
-import styled from 'styled-components'
+
 import { IProps } from './selectInput.types'
 
 export const StyledSelectInput = styled('div')<IProps>`

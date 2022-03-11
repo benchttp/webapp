@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { useState } from 'react'
 
 import { TextInput } from 'components'
 import { hideStorybookControl } from 'shared/helpers/utils'
 import { Colors, Icons } from 'shared/style/constants'
-import { useState } from 'react'
 
 export default {
   title: 'Atoms/TextInput',

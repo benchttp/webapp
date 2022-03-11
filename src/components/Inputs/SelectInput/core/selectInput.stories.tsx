@@ -1,8 +1,8 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
+import { useState } from 'react'
 
 import { SelectInput } from 'components'
 import { hideStorybookControl } from 'shared/helpers/utils'
-import { useState } from 'react'
 
 export default {
   title: 'Atoms/SelectInput',

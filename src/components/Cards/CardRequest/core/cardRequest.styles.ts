@@ -9,7 +9,7 @@ import {
   FONT_SIZES,
   FONT_WEIGHTS,
   SPACINGS,
-} from '../../../shared/style/constants'
+} from '../../../../shared/style/constants'
 
 export const Row = styled.div`
   display: flex;

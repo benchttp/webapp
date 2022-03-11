@@ -1,10 +1,10 @@
-import { ExpansionPanel } from 'components/ExpansionPanel'
 import { FC } from 'react'
-import { CardRequestHeader } from './subcomponent/CardRequestHeader'
-import { IProps } from './core/cardRequest.types'
-import { Card } from 'components/Card'
 
+import { ExpansionPanel, Card } from 'components'
+
+import { IProps } from './core/cardRequest.types'
 import { CardRequestContent } from './subcomponent/CardRequestContent'
+import { CardRequestHeader } from './subcomponent/CardRequestHeader'
 
 export const CardRequest: FC<IProps> = (props) => {
   const data = [

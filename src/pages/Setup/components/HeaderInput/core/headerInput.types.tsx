@@ -1,5 +1,6 @@
-import { IHeader } from 'pages/Setup/core/setup.types'
 import { Dispatch, SetStateAction } from 'react'
+
+import { IHeader } from 'pages/Setup/core/setup.types'
 import { IStandardProps } from 'shared/types/common'
 
 export interface IProps extends IStandardProps {

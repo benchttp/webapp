@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import { IHook } from './queryParamInput.types'
 
 export const useQueryParamInput: IHook = ({

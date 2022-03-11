@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import { METHOD_OPTIONS } from './setup.constants'
 import { formatHeaders, formatOut, formatQueryParams } from './setup.helpers'
 import { IHook } from './setup.types'

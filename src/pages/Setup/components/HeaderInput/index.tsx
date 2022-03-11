@@ -1,10 +1,12 @@
 import { FC, useState } from 'react'
-import { TextInput } from '../../../../components/Inputs/TextInput'
-import { StyledHeaderInput } from './core/headerInput.styles'
-import { IHeaderValue, IProps } from './core/headerInput.types'
+
+import { TextInput } from 'components'
+
 import { HeaderInputValue } from './components/HeaderInputValue'
 import { DEFAULT_HEADER_VALUES } from './core/headerInput.constants'
 import { useHeaderInput } from './core/headerInput.hook'
+import { StyledHeaderInput } from './core/headerInput.styles'
+import { IHeaderValue, IProps } from './core/headerInput.types'
 
 export const HeaderInput: FC<IProps> = (props) => {
   const { index, className, headers, setHeaders } = props

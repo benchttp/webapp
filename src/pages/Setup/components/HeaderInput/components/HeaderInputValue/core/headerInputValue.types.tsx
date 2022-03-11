@@ -1,6 +1,8 @@
-import { IHeaderValue } from 'pages/Setup/components/HeaderInput/core/headerInput.types'
 import { Dispatch, SetStateAction } from 'react'
+
 import { IStandardProps } from 'shared/types/common'
+
+import { IHeaderValue } from '../../../core/headerInput.types'
 
 export interface IProps extends IStandardProps {
   headerIndex: number

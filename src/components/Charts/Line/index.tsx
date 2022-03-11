@@ -1,8 +1,7 @@
-import { FC } from 'react'
-import { IProps } from './core/line.types'
-import { StyledLineChart } from './core/line.styles'
 import { ResponsiveLine, SliceTooltipProps } from '@nivo/line'
-import { Text } from 'components/Text'
+import { FC } from 'react'
+
+import { Text } from 'components'
 import {
   Colors,
   COLORS,
@@ -10,6 +9,9 @@ import {
   FontSizes,
   FontWeights,
 } from 'shared/style/constants'
+
+import { StyledLineChart } from './core/line.styles'
+import { IProps } from './core/line.types'
 
 export const LineChart: FC<IProps> = (props) => {
   const { data, legendX, legendY } = props

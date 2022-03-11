@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from 'react'
 
-import { IStandardProps } from 'shared/types/common'
 import { Colors, Icons } from 'shared/style/constants'
+import { IStandardProps } from 'shared/types/common'
 
 export interface IProps extends IStandardProps {
   name: string

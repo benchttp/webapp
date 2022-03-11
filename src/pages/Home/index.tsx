@@ -1,13 +1,17 @@
+import { skipToken } from '@reduxjs/toolkit/dist/query'
 import { FC } from 'react'
+import { Loader } from 'react-feather'
 
 import { Text, CardConfig, Card, CardResult } from 'components'
-import { Colors, FontFamilies, FontSizes, Icons } from 'shared/style/constants'
-import { MainLayout } from 'layouts/MainLayout'
-import { useGetReportsByIdQuery, useGetStatByIdQuery } from 'shared/store/apis'
+import { MainLayout } from 'layouts'
 import { useAppSelector } from 'shared/store'
-import { Loader } from 'react-feather'
+import {
+  useGetReportsByIdQuery,
+  useGetStatByIdQuery,
+} from 'shared/store/apis/benchttp'
+import { Colors, FontFamilies, FontSizes, Icons } from 'shared/style/constants'
+
 import { useHome } from './core/home.hook'
-import { skipToken } from '@reduxjs/toolkit/dist/query'
 import { StyledHome } from './core/home.styles'
 
 export const Home: FC = () => {
